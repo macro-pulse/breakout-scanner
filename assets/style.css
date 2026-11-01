@@ -46,3 +46,4 @@ input[type=search]{min-width:240px}input[type=search]:focus,select:focus{outline
 @media(max-width:560px){.wrap{padding:0 12px}.hmeta{width:100%;justify-content:space-between}.kpi b{font-size:22px}input[type=search]{min-width:0;flex:1 1 100%}.count{margin-left:0}.top{position:static}.ph{padding:14px}.cards{padding:12px}.filters{padding:12px}}
 .lbl{color:var(--mut);font-size:11px;text-transform:uppercase;letter-spacing:.06em;font-weight:600}.chip input[type=radio]{accent-color:var(--acc);margin:0}.sub2{border-top:1px solid var(--line)}
 .bd.dn2{color:#FCA5A5;border-color:rgba(248,113,113,.35);background:rgba(248,113,113,.08)}
+.chip.gem{border-color:rgba(45,212,191,.5);color:var(--tx);font-weight:600}.gemb{font-size:11px;margin-left:2px}.tabs a[href="#gems"]{color:var(--acc);font-weight:600}

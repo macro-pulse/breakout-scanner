@@ -22,8 +22,9 @@ function badges(r){const b=[];
  if(r.higher_lows)b.push('<span class="bd">Higher lows</span>');
  if(r.rvol50!=null&&r.rvol50>=1.5)b.push('<span class="bd g">RVOL '+Number(r.rvol50).toFixed(1)+'×</span>');
  return b.join('');}
+const GEM={};
 const C={
- ticker:['Ticker',r=>esc(r.ticker),'l tk'],name:['Name',r=>esc(r.name),'l nmc'],source:['Universe',r=>esc(srcLabel(r.source)),'l'],
+ ticker:['Ticker',r=>esc(r.ticker)+(GEM[r.ticker]!=null?' <span class="gemb" title="Gem">💎</span>':''),'l tk'],name:['Name',r=>esc(r.name),'l nmc'],source:['Universe',r=>esc(srcLabel(r.source)),'l'],
  sector:['Sector',r=>esc(r.sector||'ETF'),'l'],price:['Last',r=>num(r.price)],
  setup_score:['Setup',r=>num(r.setup_score,0)],value_score:['Value',r=>num(r.value_score,0)],combined:['Score',r=>r.combined==null?NA:'<b>'+num(r.combined,0)+'</b>'],
  trigger:['Trigger',r=>num(r.trigger)],stop:['Stop',r=>num(r.stop)],to_trigger_pct:['To Trigger',r=>pct(r.to_trigger_pct)],risk_pct:['Stop Dist.',r=>pct(r.risk_pct)],
@@ -56,7 +57,7 @@ function grid(el,getRows,keys,state){
  el.addEventListener('click',e=>{const t=e.target.closest('th');if(!t)return;const c=t.dataset.k;
   state.d=state.k===c?-state.d:(TXT.has(c)||c==='to_trigger_pct'?1:-1);state.k=c;render();if(state.cb)state.cb();});
  return render;}
-fetch('data/scan.json').then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json();}).then(D=>{
+fetch('data/scan.json?v='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json();}).then(D=>{
  const dd=new Date(D.data_date+'T12:00:00').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',year:'numeric'});
  $('#hdate').textContent=dd+' close';$('#huni').textContent=D.scanned.toLocaleString()+' names';$('#hgen').textContent=D.generated_et;
  const bo=D.rows.filter(r=>r.breaking_out).length;
@@ -68,7 +69,7 @@ fetch('data/scan.json').then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);retu
   '<div class="lv"><div><span>Trigger</span><b>'+num(r.trigger)+'</b></div><div><span>Stop</span><b>'+num(r.stop)+'</b></div><div><span>Stop dist.</span><b>'+pct(r.risk_pct)+'</b></div></div>'+
   '<div class="badges">'+badges(r)+'</div></article>').join('');
  grid($('#voltbl'),()=>D.volume_breakouts,['ticker','name','source','sector','price','rvol50','rvol3d','trigger','stop','risk_pct','ema_8_21','combined'],{k:'rvol50',d:-1})();
- const gm=D.gems||[];
+ const gm=D.gems||[];gm.forEach(g=>{GEM[g.ticker]=g;});D.rows.forEach(r=>{const g=GEM[r.ticker];if(g){r.target_est=g.target_est;r.gem_upside_pct=g.gem_upside_pct;}});
  grid($('#gemtbl'),()=>gm,['ticker','name','price','target_est','gem_upside_pct','setup_score','trigger','stop','risk_pct','rvol50','ema_8_21','sma50_rising','sma200_rising','sma40w_rising','sigs','off_52w_high_pct'],{k:'gem_upside_pct',d:-1})();
  $('#k7').textContent=gm.length;$('#k7s').textContent=gm.filter(r=>r.sma200_rising&&r.vs_sma200_pct>=0).length+' above a rising 200D';
  const kb=D.kissing_ma||[],kr=()=>{const m=(document.querySelector('input[name=fma]:checked')||{}).value;return kb.filter(r=>!m||r.ma_riding.split(',').includes(m));};
@@ -85,11 +86,11 @@ fetch('data/scan.json').then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);retu
  const secs=[...new Set(D.rows.map(r=>r.sector).filter(Boolean))].sort();
  $('#fsec').insertAdjacentHTML('beforeend',secs.map(s=>'<option>'+esc(s)+'</option>').join(''));
  const filt=()=>{const q=$('#q').value.trim().toLowerCase(),src=$('#fsrc').value,sec=$('#fsec').value;
-  return D.rows.filter(r=>(!q||(r.ticker+' '+(r.name||'')+' '+(r.sector||'')).toLowerCase().includes(q))&&(!src||String(r.source).includes(src))&&
+  return D.rows.filter(r=>(!q||(r.ticker+' '+(r.name||'')+' '+(r.sector||'')).toLowerCase().includes(q))&&(!src||(src==='GEMS'?GEM[r.ticker]!=null:String(r.source).includes(src)))&&(!$('#fgem').checked||GEM[r.ticker]!=null)&&
    (!sec||r.sector===sec)&&(!$('#ftight').checked||r.tight_range)&&(!$('#fbo').checked||r.breaking_out)&&(!$('#fbull').checked||bull(r.ema_8_21))&&(!$('#fma2').value||String(r.ma_riding||'').split(',').includes($('#fma2').value)));};
  const st={k:'combined',d:-1};
- const ra=grid($('#alltbl'),filt,['ticker','sector','source','price','combined','setup_score','value_score','trigger','stop','to_trigger_pct','risk_pct','rvol50','tight_range','breaking_out','ema_8_21','sma200_rising','sma40w_rising','ma_riding','fwd_pe','peg','off_52w_high_pct'],st);
+ const ra=grid($('#alltbl'),filt,['ticker','sector','source','price','target_est','gem_upside_pct','combined','setup_score','value_score','trigger','stop','to_trigger_pct','risk_pct','rvol50','tight_range','breaking_out','ema_8_21','sma200_rising','sma40w_rising','ma_riding','fwd_pe','peg','off_52w_high_pct'],st);
  const go=()=>{$('#count').textContent=ra().toLocaleString()+' of '+D.rows.length.toLocaleString()+' shown';};st.cb=()=>{$('#count').textContent=$('#alltbl tbody').rows.length+' of '+D.rows.length+' shown';};
- ['#q','#fsrc','#fsec','#ftight','#fbo','#fbull','#fma2'].forEach(s=>$(s).addEventListener('input',go));go();
+ ['#q','#fgem','#fsrc','#fsec','#ftight','#fbo','#fbull','#fma2'].forEach(s=>$(s).addEventListener('input',go));go();
 }).catch(e=>{$('#hdate').textContent='Unavailable';$('#cards').innerHTML='<p class="mut">Could not load data ('+esc(e.message)+'). Serve over http(s), not file://.</p>';});
 })();
