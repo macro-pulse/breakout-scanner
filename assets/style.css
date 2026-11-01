@@ -47,3 +47,12 @@ input[type=search]{min-width:240px}input[type=search]:focus,select:focus{outline
 .lbl{color:var(--mut);font-size:11px;text-transform:uppercase;letter-spacing:.06em;font-weight:600}.chip input[type=radio]{accent-color:var(--acc);margin:0}.sub2{border-top:1px solid var(--line)}
 .bd.dn2{color:#FCA5A5;border-color:rgba(248,113,113,.35);background:rgba(248,113,113,.08)}
 .chip.gem{border-color:rgba(45,212,191,.5);color:var(--tx);font-weight:600}.gemb{font-size:11px;margin-left:2px}.tabs a[href="#gems"]{color:var(--acc);font-weight:600}
+.bregime{display:flex;align-items:center;gap:12px;margin:4px 0 14px;flex-wrap:wrap;color:var(--mut)}
+.pill{padding:4px 12px;border-radius:999px;font-weight:700;font-size:13px}.pill.Bullish{background:rgba(74,222,128,.15);color:var(--up)}.pill.Bearish{background:rgba(248,113,113,.15);color:var(--dn)}.pill.Neutral{background:rgba(251,191,36,.15);color:var(--amb)}
+.bcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:16px}
+.bcard{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:10px 12px}.bcard .k{color:var(--mut);font-size:12px}.bcard .v{font-size:22px;font-weight:700}.bcard .c{font-size:12px}.bcard .t{font-size:11px;font-weight:700;margin-top:2px}
+.pos{color:var(--up)}.neg{color:var(--dn)}.neu{color:var(--amb)}
+.bcharts{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px;margin-bottom:8px}
+.bchart{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:10px}.bchart h4{margin:0 0 6px;font-size:13px;color:var(--mut);font-weight:600}.bchart h4 b{color:var(--tx);float:right}.bchart svg{width:100%;height:130px;display:block}
+.sbtbl td,.sbtbl th{text-align:right;white-space:nowrap}.sbtbl td:first-child,.sbtbl th:first-child{text-align:left}
+.sbtbl td.g1{background:rgba(74,222,128,.14)}.sbtbl td.g2{background:rgba(74,222,128,.32);color:#fff;font-weight:700}.sbtbl td.r1{background:rgba(248,113,113,.14)}.sbtbl td.r2{background:rgba(248,113,113,.32);color:#fff;font-weight:700}
