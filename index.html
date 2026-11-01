@@ -2,43 +2,63 @@
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Undervalued Breakout Scanner</title>
-<meta name="description" content="End-of-day scan for undervalued stocks setting up for breakouts.">
+<meta name="description" content="End-of-day equity scan of undervalued US stocks consolidating in tight ranges, with breakout, retest, all-time-high, major-level and relative-volume signals.">
+<meta property="og:title" content="Undervalued Breakout Scanner">
+<meta property="og:description" content="Daily end-of-day scan: tight-range bases, breakouts and relative volume across the S&amp;P 500, Nasdaq-100, S&amp;P 400 and an AI watchlist.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0B1220">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="assets/style.css">
 </head><body>
-<header><h1>Undervalued Breakout Scanner</h1>
-<p class="meta" id="meta">Loading…</p>
-<p class="warn"><strong>Not financial advice.</strong> Mechanical screen from end-of-day data for education only. Levels are not recommendations; verify on a live chart and do your own research.</p>
-<nav><a href="#picks">Top picks</a><a href="#vol">Volume breakouts</a><a href="#jb">JB watchlist</a><a href="#all">All names</a><a href="#method">Methodology</a><a href="data/scan.csv">CSV</a></nav>
+<header class="top"><div class="wrap hdr">
+ <div class="brand"><img src="assets/favicon.svg" alt="" width="28" height="28"><div><h1>Undervalued Breakout Scanner</h1><p class="sub">End-of-day equity screen · Value × Setup</p></div></div>
+ <dl class="hmeta"><div><dt>Data as of</dt><dd id="hdate">–</dd></div><div><dt>Universe</dt><dd id="huni">–</dd></div><div><dt>Generated</dt><dd id="hgen">–</dd></div></dl>
+</div>
+<nav class="wrap tabs"><a href="#picks">Top Picks</a><a href="#vol">Volume Breakouts</a><a href="#kiss">Kissing MA</a><a href="#ath">All-Time Highs</a><a href="#major">Major Levels</a><a href="#ai">AI Watchlist</a><a href="#all">Screener</a><a href="#method">Methodology</a><a href="data/scan.csv" download>Export CSV</a></nav>
 </header>
-<main>
-<section id="picks"><h2>Top picks: closest to breakout</h2><div id="cards" class="cards"></div></section>
-<section id="vol"><h2>Volume breakouts</h2><p class="note">RVOL ≥ 1.5 on an up day, close in top third of range, above the prior 20-day high. End-of-day RVOL; intraday needs a live feed.</p><div class="tw"><table id="voltbl"></table></div></section>
-<section id="jb"><h2>Justin Banks watchlist status</h2><p class="note">Source: <a href="https://x.com/RealJGBanks/status/2116658575791530481" rel="noopener">@RealJGBanks, Oct 31, 2026</a>. Criteria: demand zone holding, higher lows, 8/21 EMA turning bullish, breakout + retest.</p><div class="tw"><table id="jbtbl"></table></div></section>
-<section id="all"><h2>All scanned names</h2>
+<main class="wrap">
+<section class="kpis" id="kpis">
+ <div class="kpi"><span>Names scanned</span><b id="k1">–</b><small id="k1s"></small></div>
+ <div class="kpi"><span>Top picks</span><b id="k2">–</b><small>setup ≥ 60, ≤ 4% to trigger</small></div>
+ <div class="kpi"><span>Volume breakouts</span><b id="k3">–</b><small>RVOL ≥ 1.5 above 20-day high</small></div>
+ <div class="kpi"><span>Breakouts today</span><b id="k4">–</b><small>close &gt; 20d high, vol ≥ 1.5×</small></div>
+ <div class="kpi"><span>Kissing MA</span><b id="k5">–</b><small>rising MA + tight range</small></div>
+ <div class="kpi"><span>ATH / Major level</span><b id="k6">–</b><small>new highs on volume</small></div>
+</section>
+<section id="picks" class="panel"><div class="ph"><h2>Top Picks</h2><p>Highest combined score among names nearest their breakout level, plus the 2 best AI names.</p></div><div id="cards" class="cards"></div></section>
+<section id="vol" class="panel"><div class="ph"><h2>Volume Breakouts</h2><p>RVOL ≥ 1.5 on an up day, close in top third of range, above the prior 20-day high. End-of-day data.</p></div><div class="tw"><table id="voltbl"></table></div></section>
+<section id="kiss" class="panel"><div class="ph"><h2>Kissing MA (rising 50D/100D/200D/40W + tight range)</h2><p>The moving average is rising (50/100/200-day vs 10 sessions ago; 40-week vs 2 weeks ago), price sits 0–3% above it or dipped to it and held, and the base is tight. Stop = 1% under the lowest MA being ridden.</p></div>
+<div class="filters"><span class="lbl">MA</span><label class="chip"><input type="radio" name="fma" value="" checked> All</label><label class="chip"><input type="radio" name="fma" value="50D"> 50D</label><label class="chip"><input type="radio" name="fma" value="100D"> 100D</label><label class="chip"><input type="radio" name="fma" value="200D"> 200D</label><label class="chip"><input type="radio" name="fma" value="40W"> 40W</label><span id="kcount" class="count"></span></div>
+<div class="tw"><table id="kisstbl"></table></div></section>
+<section id="ath" class="panel"><div class="ph"><h2>All-Time High Breakouts</h2><p>Close at a new all-time high (full price history) on RVOL ≥ 1.5, closing in the top third of the day's range. Level = prior all-time high; stop = breakout-day low.</p></div><div class="tw"><table id="athtbl"></table></div>
+<div class="ph sub2"><h2>Near All-Time High (watch)</h2><p>Within 3% of the all-time high, not yet broken out.</p></div><div class="tw"><table id="nathtbl"></table></div></section>
+<section id="major" class="panel"><div class="ph"><h2>Major Level Breakouts</h2><p>Close above a major resistance on RVOL ≥ 1.5: the 52-week high, a 60- or 120-day base high price spent weeks under, or a round-number level. Stop = breakout-day low.</p></div><div class="tw"><table id="majtbl"></table></div></section>
+<section id="ai" class="panel"><div class="ph"><h2>AI Watchlist</h2><p>Trend and base status: higher lows, 10/40-week MAs, 8/21 EMA, tight range, breakout retest.</p></div><div class="tw"><table id="aitbl"></table></div></section>
+<section id="all" class="panel"><div class="ph"><h2>Screener</h2><p>All scanned names. Click a column header to sort.</p></div>
 <div class="filters">
-<input id="q" type="search" placeholder="Search ticker, name, sector">
-<select id="fsrc"><option value="">All sources</option><option value="JB">JB watchlist</option><option value="SP500">S&amp;P 500</option><option value="NDX">Nasdaq-100</option><option value="SP400">S&amp;P 400</option></select>
-<select id="fsec"><option value="">All sectors</option></select>
-<label><input type="checkbox" id="ftight"> Tight range</label>
-<label><input type="checkbox" id="fbo"> Breaking out</label>
-<label><input type="checkbox" id="fbull"> 8 &gt; 21</label>
-<span id="count" class="note"></span></div>
-<div class="tw"><table id="alltbl"></table></div></section>
-<section id="method"><h2>Methodology</h2><ul>
-<li><b>Universe:</b> Justin Banks AI watchlist (post, graphic, ETFs) + S&amp;P 500 + Nasdaq-100 + S&amp;P 400. Non-watchlist names need price &gt; $5 and 50-day average dollar volume &gt; $20M. Screens via Finviz Elite; daily OHLCV from Yahoo Finance.</li>
-<li><b>Tight range:</b> 20-day high-low range ≤ max(12%, 3.5 × ATR14%) and either Bollinger Band width in the bottom 25% of its 1-year history or ATR(14)% down 15%+ vs 20 days ago. Also tracked: NR7, inside days, volume dry-up.</li>
-<li><b>8/21 EMA:</b> 8-day vs 21-day EMA; "fresh" = crossed within the last 5 sessions.</li>
-<li><b>Higher lows:</b> each of the last 3 weekly lows above the prior one.</li>
-<li><b>10/40-week MA:</b> close above the 10- and 40-week simple moving averages.</li>
-<li><b>Breakout:</b> close above the prior 20-day high on volume ≥ 1.5× 50-day average. <b>Retest:</b> broke a 20-day high in the last 10 sessions, pulled back within 3% of it, and still closes above.</li>
-<li><b>RVOL:</b> day volume / prior 50-day (and 20-day) average; 3-day average RVOL for accumulation. ≥ 1.5 on an up day closing in the top third = breakout volume; ≥ 2 = strong; 3-day &lt; 0.7 = dry-up in the base.</li>
-<li><b>Trigger:</b> prior 20-day high (next resistance if already above). <b>Stop:</b> 10-day low or base low.</li>
-<li><b>Value score (0–100):</b> forward P/E vs sector median, PEG, P/S, EV/EBITDA, FCF yield, analyst target upside, % off 52-week high.</li>
-<li><b>Setup score (0–100):</b> EMA state, higher lows, MAs, tight range, dry-up, NR7/inside, breakout, retest, RVOL, distance to trigger.</li>
-<li><b>Combined</b> = 0.4 × value + 0.6 × setup.</li>
-<li><b>Risk %:</b> distance from trigger down to stop, as a percent of the trigger price.</li>
-</ul><p class="note" id="gaps"></p></section>
+<input id="q" type="search" placeholder="Search ticker, name or sector" aria-label="Search">
+<select id="fsrc" aria-label="Universe"><option value="">All universes</option><option value="AI">AI watchlist</option><option value="SP500">S&amp;P 500</option><option value="NDX">Nasdaq-100</option><option value="SP400">S&amp;P 400</option></select>
+<select id="fsec" aria-label="Sector"><option value="">All sectors</option></select>
+<label class="chip"><input type="checkbox" id="ftight"> Tight range</label>
+<label class="chip"><input type="checkbox" id="fbo"> Breakout</label>
+<label class="chip"><input type="checkbox" id="fbull"> 8&gt;21</label>
+<select id="fma2" aria-label="Kissing MA"><option value="">Any MA</option><option>50D</option><option>100D</option><option>200D</option><option>40W</option></select>
+<span id="count" class="count"></span></div>
+<div class="tw tall"><table id="alltbl"></table></div></section>
+<section id="method" class="panel"><div class="ph"><h2>Methodology</h2></div><ul class="method">
+<li><b>Universe</b> AI watchlist (stocks and ETFs) + S&amp;P 500 + Nasdaq-100 + S&amp;P 400. Non-watchlist names require price &gt; $5 and 50-day average dollar volume &gt; $20M. Fundamentals via Finviz; daily OHLCV via Yahoo Finance.</li>
+<li><b>Tight range</b> 20-day high–low range ≤ max(12%, 3.5 × ATR14%) and Bollinger width in the bottom 25% of its 1-year history or ATR(14)% down 15%+ vs 20 days ago. Also tracked: NR7, inside days, volume dry-up.</li>
+<li><b>8/21 EMA</b> 8-day vs 21-day EMA; “fresh” = crossed within the last 5 sessions.</li>
+<li><b>Higher lows</b> each of the last 3 weekly lows above the prior one. <b>10/40-week MA</b> close above the 10- and 40-week SMAs.</li>
+<li><b>Breakout</b> close above the prior 20-day high on volume ≥ 1.5× the 50-day average. <b>Retest</b> broke a 20-day high in the last 10 sessions, pulled back within 3% of it, and still closes above.</li>
+<li><b>RVOL</b> day volume / prior 50-day (and 20-day) average; 3-day average for accumulation. ≥ 1.5 on an up day in the top third = breakout volume; ≥ 2 = strong; 3-day &lt; 0.7 = base dry-up.</li>
+<li><b>Trigger / Stop</b> trigger = prior 20-day high (next resistance if already above); stop = 10-day low or base low. <b>Stop dist.</b> = (trigger − stop) / trigger.</li>
+<li><b>Scores</b> Value (0–100): forward P/E vs sector, PEG, P/S, EV/EBITDA, FCF yield, target upside, % off 52-week high. Setup (0–100): EMA state, higher lows, MAs, tight range, dry-up, NR7/inside, breakout, retest, RVOL, distance to trigger. Combined = 0.4 × Value + 0.6 × Setup.</li>
+<li><b>Kissing MA</b> rising 50D/100D/200D SMA or 40-week SMA, price 0–3% above it (or tagged it within 1% and held), plus a tight range.</li>
+<li><b>All-time high</b> uses each stock's full Yahoo price history; breakout requires RVOL ≥ 1.5 and a top-third close. <b>Major levels</b> 52-week high, 60/120-day base highs (≥ 15 prior closes under), round numbers.</li>
+<li><b>Top picks rule</b> setup ≥ 60, within 4% of trigger, stop distance ≥ 1.5%, ranked by combined score (top 8), plus the 2 best AI names.</li>
+</ul><p class="gaps" id="gaps"></p></section>
 </main>
-<footer><p>Not financial advice. Data may be delayed or contain errors.</p></footer>
+<footer class="wrap foot"><p><b>For informational purposes only. Not investment advice.</b> Mechanical screen built from end-of-day data, which may be delayed or contain errors. Levels shown are not recommendations; do your own research.</p></footer>
 <script src="assets/app.js"></script>
 </body></html>
