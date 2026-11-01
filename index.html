@@ -14,7 +14,7 @@
  <div class="brand"><img src="assets/favicon.svg" alt="" width="28" height="28"><div><h1>Undervalued Breakout Scanner</h1><p class="sub">End-of-day equity screen · Value × Setup</p></div></div>
  <dl class="hmeta"><div><dt>Data as of</dt><dd id="hdate">–</dd></div><div><dt>Universe</dt><dd id="huni">–</dd></div><div><dt>Generated</dt><dd id="hgen">–</dd></div></dl>
 </div>
-<nav class="wrap tabs"><a href="#picks">Top Picks</a><a href="#gems">Gems 💎</a><a href="#vol">Volume Breakouts</a><a href="#kiss">Kissing MA</a><a href="#ath">All-Time Highs</a><a href="#major">Major Levels</a><a href="#ai">AI Watchlist</a><a href="#all">Screener</a><a href="#method">Methodology</a><a href="data/scan.csv" download>Export CSV</a></nav>
+<nav class="wrap tabs"><a href="#picks">Top Picks</a><a href="#gems">Gems 💎</a><a href="#vol">Volume Breakouts</a><a href="#kiss">Kissing MA</a><a href="#ath">All-Time Highs</a><a href="#major">Major Levels</a><a href="#ai">AI Watchlist</a><a href="#all">Screener</a><a href="#breadth">Breadth</a><a href="#method">Methodology</a><a href="data/scan.csv" download>Export CSV</a></nav>
 </header>
 <main class="wrap">
 <section class="kpis" id="kpis">
@@ -48,6 +48,24 @@
 <select id="fma2" aria-label="Kissing MA"><option value="">Any MA</option><option>50D</option><option>100D</option><option>200D</option><option>40W</option></select>
 <span id="count" class="count"></span></div>
 <div class="tw tall"><table id="alltbl"></table></div></section>
+<section id="breadth" class="panel"><div class="ph"><h2>Market Breadth</h2><p id="bmeta">Loading…</p></div>
+<div id="bregime" class="bregime"></div><div id="bcards" class="bcards"></div><div id="bcharts" class="bcharts"></div>
+<div class="ph sub2"><h2>Stockbee Market Monitor (Pradeep Bonde)</h2><p>Daily counts across the universe. Green/red shading marks readings commonly cited as strong/weak.</p></div>
+<div class="tw tall"><table id="sbtbl" class="sbtbl"></table></div>
+<div class="ph sub2"><h2>How traders read these</h2></div><ul class="method" id="blegend">
+<li><b>Up/Down 4%</b> stocks moving ±4% on volume above the prior day (vol ≥ 100k). Commonly cited Stockbee guideline: 300+ up-4% stocks in a day is a breadth thrust; 300+ down-4% signals heavy selling.</li>
+<li><b>5-day / 10-day ratio</b> sum of up-4% ÷ sum of down-4%. 10-day ratio above 2 = strong, below 0.5 = weak/washout (often near lows).</li>
+<li><b>25% up/down in a quarter (65d)</b> intermediate trend gauge; when the "down" count exceeds the "up" count the market is in a correction. Extremes of 200 or fewer up stocks often mark lows.</li>
+<li><b>25% / 50% in a month (20d), 13% in 34 days</b> short-term momentum; rising up-counts show momentum expanding; spikes in down-counts show capitulation.</li>
+<li><b>T2108</b> % of stocks above their 40-day MA. Below 20 = oversold, above 70 = overbought.</li>
+<li><b>% above 20/50/200-day MA</b> above 50% = majority in uptrends; above 80 overbought, below 20 oversold.</li>
+<li><b>New highs / new lows (52-week)</b> NH−NL positive and expanding confirms a healthy advance. High-Low Index = 10-day MA of NH/(NH+NL); above 50 bullish.</li>
+<li><b>A/D line</b> cumulative advances minus declines; divergence from the index warns of narrowing participation.</li>
+<li><b>McClellan Oscillator / Summation</b> 19 vs 39-day EMA of ratio-adjusted net advances (×1000). Above 0 = bullish breadth momentum; readings beyond ±100 are extremes. Summation = running total (trend).</li>
+<li><b>Up/Down volume</b> dollar volume in advancers ÷ decliners; 9:1 days either way mark thrusts/capitulation.</li>
+<li><b>Zweig Breadth Thrust</b> 10-day EMA of adv/(adv+dec) moving from below 40% to above 61.5% within 10 days, a rare and bullish signal.</li>
+<li><b>Regime rule (transparent)</b> one point each for: 10d ratio ≥ 1.5, T2108 ≥ 50, %>50D ≥ 50, %>200D ≥ 50, McClellan &gt; 0, NH−NL &gt; 0. 5–6 = Bullish, 2–4 = Neutral, 0–1 = Bearish.</li>
+</ul></section>
 <section id="method" class="panel"><div class="ph"><h2>Methodology</h2></div><ul class="method">
 <li><b>Universe</b> AI watchlist (stocks and ETFs) + S&amp;P 500 + Nasdaq-100 + S&amp;P 400. Non-watchlist names require price &gt; $5 and 50-day average dollar volume &gt; $20M. Fundamentals via Finviz; daily OHLCV via Yahoo Finance.</li>
 <li><b>Tight range</b> 20-day high–low range ≤ max(12%, 3.5 × ATR14%) and Bollinger width in the bottom 25% of its 1-year history or ATR(14)% down 15%+ vs 20 days ago. Also tracked: NR7, inside days, volume dry-up.</li>
@@ -64,4 +82,5 @@
 </main>
 <footer class="wrap foot"><p><b>For informational purposes only. Not investment advice.</b> Mechanical screen built from end-of-day data, which may be delayed or contain errors. Levels shown are not recommendations; do your own research.</p></footer>
 <script src="assets/app.js"></script>
+<script src="assets/breadth.js"></script>
 </body></html>
