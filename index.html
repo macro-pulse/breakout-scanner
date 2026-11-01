@@ -14,7 +14,7 @@
  <div class="brand"><img src="assets/favicon.svg" alt="" width="28" height="28"><div><h1>Undervalued Breakout Scanner</h1><p class="sub">End-of-day equity screen · Value × Setup</p></div></div>
  <dl class="hmeta"><div><dt>Data as of</dt><dd id="hdate">–</dd></div><div><dt>Universe</dt><dd id="huni">–</dd></div><div><dt>Generated</dt><dd id="hgen">–</dd></div></dl>
 </div>
-<nav class="wrap tabs"><a href="#picks">Top Picks</a><a href="#vol">Volume Breakouts</a><a href="#kiss">Kissing MA</a><a href="#ath">All-Time Highs</a><a href="#major">Major Levels</a><a href="#ai">AI Watchlist</a><a href="#all">Screener</a><a href="#method">Methodology</a><a href="data/scan.csv" download>Export CSV</a></nav>
+<nav class="wrap tabs"><a href="#picks">Top Picks</a><a href="#gems">Gems 💎</a><a href="#vol">Volume Breakouts</a><a href="#kiss">Kissing MA</a><a href="#ath">All-Time Highs</a><a href="#major">Major Levels</a><a href="#ai">AI Watchlist</a><a href="#all">Screener</a><a href="#method">Methodology</a><a href="data/scan.csv" download>Export CSV</a></nav>
 </header>
 <main class="wrap">
 <section class="kpis" id="kpis">
@@ -22,10 +22,12 @@
  <div class="kpi"><span>Top picks</span><b id="k2">–</b><small>setup ≥ 60, ≤ 4% to trigger</small></div>
  <div class="kpi"><span>Volume breakouts</span><b id="k3">–</b><small>RVOL ≥ 1.5 above 20-day high</small></div>
  <div class="kpi"><span>Breakouts today</span><b id="k4">–</b><small>close &gt; 20d high, vol ≥ 1.5×</small></div>
+ <div class="kpi"><span>Gems 💎</span><b id="k7">–</b><small id="k7s">tracked names</small></div>
  <div class="kpi"><span>Kissing MA</span><b id="k5">–</b><small>rising MA + tight range</small></div>
  <div class="kpi"><span>ATH / Major level</span><b id="k6">–</b><small>new highs on volume</small></div>
 </section>
 <section id="picks" class="panel"><div class="ph"><h2>Top Picks</h2><p>Highest combined score among names nearest their breakout level, plus the 2 best AI names.</p></div><div id="cards" class="cards"></div></section>
+<section id="gems" class="panel"><div class="ph"><h2>Gems 💎</h2><p>Tracked high-conviction names with an estimated price target. Upside is calculated from the latest close. <b>Targets are third-party estimates, not verified.</b></p></div><div class="tw"><table id="gemtbl"></table></div></section>
 <section id="vol" class="panel"><div class="ph"><h2>Volume Breakouts</h2><p>RVOL ≥ 1.5 on an up day, close in top third of range, above the prior 20-day high. End-of-day data.</p></div><div class="tw"><table id="voltbl"></table></div></section>
 <section id="kiss" class="panel"><div class="ph"><h2>Kissing MA (rising 50D/100D/200D/40W + tight range)</h2><p>The moving average is rising (50/100/200-day vs 10 sessions ago; 40-week vs 2 weeks ago), price sits 0–3% above it or dipped to it and held, and the base is tight. Stop = 1% under the lowest MA being ridden.</p></div>
 <div class="filters"><span class="lbl">MA</span><label class="chip"><input type="radio" name="fma" value="" checked> All</label><label class="chip"><input type="radio" name="fma" value="50D"> 50D</label><label class="chip"><input type="radio" name="fma" value="100D"> 100D</label><label class="chip"><input type="radio" name="fma" value="200D"> 200D</label><label class="chip"><input type="radio" name="fma" value="40W"> 40W</label><span id="kcount" class="count"></span></div>
