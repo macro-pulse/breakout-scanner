@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"><meta http-equiv="Cache-Control" content="no-cache"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Undervalued Breakout Scanner</title>
 <meta name="description" content="End-of-day equity scan of undervalued US stocks consolidating in tight ranges, with breakout, retest, all-time-high, major-level and relative-volume signals.">
 <meta property="og:title" content="Undervalued Breakout Scanner">
@@ -38,8 +38,9 @@
 <section id="ai" class="panel"><div class="ph"><h2>AI Watchlist</h2><p>Trend and base status: higher lows, 10/40-week MAs, 8/21 EMA, tight range, breakout retest.</p></div><div class="tw"><table id="aitbl"></table></div></section>
 <section id="all" class="panel"><div class="ph"><h2>Screener</h2><p>All scanned names. Click a column header to sort.</p></div>
 <div class="filters">
+<label class="chip gem"><input type="checkbox" id="fgem"> Gems 💎</label>
 <input id="q" type="search" placeholder="Search ticker, name or sector" aria-label="Search">
-<select id="fsrc" aria-label="Universe"><option value="">All universes</option><option value="AI">AI watchlist</option><option value="SP500">S&amp;P 500</option><option value="NDX">Nasdaq-100</option><option value="SP400">S&amp;P 400</option></select>
+<select id="fsrc" aria-label="Universe"><option value="">All universes</option><option value="GEMS">Gems 💎</option><option value="AI">AI watchlist</option><option value="SP500">S&amp;P 500</option><option value="NDX">Nasdaq-100</option><option value="SP400">S&amp;P 400</option></select>
 <select id="fsec" aria-label="Sector"><option value="">All sectors</option></select>
 <label class="chip"><input type="checkbox" id="ftight"> Tight range</label>
 <label class="chip"><input type="checkbox" id="fbo"> Breakout</label>
