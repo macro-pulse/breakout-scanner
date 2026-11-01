@@ -36,6 +36,11 @@ const C={
  sma200_rising:['200D',r=>maS(r.vs_sma200_pct,r.sma200_rising),'l'],sma40w_rising:['40W',r=>maS(r.vs_sma40w_pct,r.sma40w_rising),'l'],
  ath_prior:['Prior ATH',r=>num(r.ath_prior)],pct_from_ath:['vs ATH',r=>pct(r.pct_from_ath)],day_low:['Stop (Day Low)',r=>num(r.day_low)],day_low_pct:['Stop Dist.',r=>pct(r.day_low_pct)],
  major_level_name:['Level Broken',r=>esc(r.major_level_name),'l'],major_level:['Level',r=>num(r.major_level)],above_level_pct:['Above Level',r=>r.above_level_pct==null?NA:'<span class="up">+'+Number(r.above_level_pct).toFixed(1)+'%</span>'],
+ target_est:['Target (est.)',r=>num(r.target_est)],gem_upside_pct:['Upside',r=>signed(r.gem_upside_pct)],
+ sma50_rising:['50D',r=>maS(r.vs_sma50_pct,r.sma50_rising),'l'],
+ sigs:['Signals',r=>{const b=[];if(r.rising_ma_tight)b.push('<span class="bd b">Kissing '+esc(r.ma_riding.replace(/,/g,'/'))+'</span>');else if(r.ma_riding)b.push('<span class="bd">On '+esc(r.ma_riding.replace(/,/g,'/'))+'</span>');
+  if(r.tight_range)b.push('<span class="bd a">Tight</span>');if(r.breaking_out)b.push('<span class="bd g">Breakout</span>');if(r.breakout_retest)b.push('<span class="bd b">Retest</span>');if(r.ath_breakout)b.push('<span class="bd g">ATH</span>');
+  return b.length?'<span class="badges">'+b.join('')+'</span>':NA;},'l'],
  fwd_pe:['Fwd P/E',r=>num(r.fwd_pe,1)],peg:['PEG',r=>num(r.peg)],target_upside_pct:['Tgt Upside',r=>signed(r.target_upside_pct)],off_52w_high_pct:['vs 52W High',r=>pct(r.off_52w_high_pct)]
 };
 C.vs_sma200_pct=['vs 200D',r=>pct(r.vs_sma200_pct)];
@@ -63,6 +68,9 @@ fetch('data/scan.json').then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);retu
   '<div class="lv"><div><span>Trigger</span><b>'+num(r.trigger)+'</b></div><div><span>Stop</span><b>'+num(r.stop)+'</b></div><div><span>Stop dist.</span><b>'+pct(r.risk_pct)+'</b></div></div>'+
   '<div class="badges">'+badges(r)+'</div></article>').join('');
  grid($('#voltbl'),()=>D.volume_breakouts,['ticker','name','source','sector','price','rvol50','rvol3d','trigger','stop','risk_pct','ema_8_21','combined'],{k:'rvol50',d:-1})();
+ const gm=D.gems||[];
+ grid($('#gemtbl'),()=>gm,['ticker','name','price','target_est','gem_upside_pct','setup_score','trigger','stop','risk_pct','rvol50','ema_8_21','sma50_rising','sma200_rising','sma40w_rising','sigs','off_52w_high_pct'],{k:'gem_upside_pct',d:-1})();
+ $('#k7').textContent=gm.length;$('#k7s').textContent=gm.filter(r=>r.sma200_rising&&r.vs_sma200_pct>=0).length+' above a rising 200D';
  const kb=D.kissing_ma||[],kr=()=>{const m=(document.querySelector('input[name=fma]:checked')||{}).value;return kb.filter(r=>!m||r.ma_riding.split(',').includes(m));};
  const kst={k:'setup_score',d:-1};const rk=grid($('#kisstbl'),kr,['ticker','name','sector','price','ma_riding','vs_sma200_pct','tight_range','ema_8_21','setup_score','combined','trigger','ma_stop','ma_stop_pct','rvol3d'],kst);
  C.vs_sma200_pct=C.vs_sma200_pct||['vs 200D',r=>pct(r.vs_sma200_pct)];
