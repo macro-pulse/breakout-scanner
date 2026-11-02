@@ -1,0 +1,183 @@
+scan,ticker,name,sector,price,chg_pct,chg_usd,gap_pct,vol,vol_mult,close_pos,entry,stop,risk_pct,stop_basis,earnings,why
+ep,PERI,Perion Network Ltd,Communication Services,11.41,31.1,2.71,31.1,7812922,19.6,67,11.44,11.37,0.5,EP-day low,,"gap +31.1%, 19.6× avg volume, from a 22% 3-mo base, neglected (down over prior 3 mo)"
+ep,TATT,TAT Technologies Ltd,Industrials,37.41,17.6,5.61,9.1,620554,5.2,72,38.63,34.3,11.2,EP-day low,earnings 2026-11-02 pre-market,"up 17.6% on the day, 5.2× avg volume, neglected (down over prior 3 mo)"
+ep,IDXX,Idexx Laboratories Inc,Healthcare,671.64,21.8,120.43,13.4,1944992,3.8,97,673.2,620.2,7.9,EP-day low,earnings 2026-11-02 pre-market,"gap +13.4%, 3.8× avg volume, from a 20% 3-mo base, neglected (down over prior 3 mo)"
+ep,REPL,Replimune Group Inc,Healthcare,19.49,10.7,1.88,0.8,7720254,3.4,91,19.68,17.67,10.2,EP-day low,,"up 10.7% on the day, 3.4× avg volume"
+ep,SFM,Sprouts Farmers Market Inc,Consumer Defensive,55.23,11.1,5.53,0.6,8664146,3.3,93,55.61,50.0,10.1,EP-day low,,"up 11.1% on the day, 3.3× avg volume, neglected (down over prior 3 mo)"
+epe,IDXX,Idexx Laboratories Inc,Healthcare,671.64,21.8,120.43,13.4,1944992,3.8,97,673.2,620.2,7.9,EP-day low,earnings 2026-11-02 pre-market,"gap +13.4%, 3.8× avg volume, from a 20% 3-mo base, neglected (down over prior 3 mo), earnings 2026-11-02 pre-market, closed at 97% of range"
+epe,TATT,TAT Technologies Ltd,Industrials,37.41,17.6,5.61,9.1,620554,5.2,72,38.63,34.3,11.2,EP-day low,earnings 2026-11-02 pre-market,"up 17.6% on the day, 5.2× avg volume, neglected (down over prior 3 mo), earnings 2026-11-02 pre-market, closed at 72% of range"
+mb,PERI,Perion Network Ltd,Communication Services,11.41,31.1,2.71,31.1,7812922,19.6,67,11.44,11.37,0.5,day low,,+31.1% on vol > yesterday after quiet 3 days
+mb,VNCE,Vince Holding Corp,Consumer Cyclical,12.0,12.5,1.33,3.0,285160,0.7,100,12.01,10.94,8.8,day low,,+12.5% on vol > yesterday after ranges contracting
+mb,SMPL,Simply Good Foods Co,Consumer Defensive,12.43,10.5,1.18,0.3,2334548,1.0,96,12.49,11.28,9.6,day low,,+10.5% on vol > yesterday after NR7 yesterday
+mb,RUN,Sunrun Inc,Technology,8.25,10.3,0.77,4.6,15215417,2.0,77,8.43,7.69,8.7,day low,,+10.3% on vol > yesterday after quiet 3 days & ranges contracting
+mb,SAM,Boston Beer Co Inc,Consumer Defensive,221.37,10.0,20.06,-0.2,345794,1.5,97,222.02,200.81,9.5,day low,,+10.0% on vol > yesterday after quiet 3 days & NR7 yesterday
+mb,MGRC,McGrath Rentcorp,Industrials,129.44,9.4,11.16,4.4,1246928,8.2,69,132.89,121.83,8.3,day low,,+9.4% on vol > yesterday after quiet 3 days
+mb,ENPH,Enphase Energy Inc,Technology,27.93,8.9,2.28,2.5,8828267,1.6,64,28.89,26.27,9.0,day low,,+8.9% on vol > yesterday after NR7 yesterday
+mb,KVYO,Klaviyo Inc,Technology,21.8,8.2,1.66,-0.7,11300213,2.0,84,22.15,20.0,9.7,day low,,+8.2% on vol > yesterday after quiet 3 days
+mb,CIGI,Colliers International Group Inc,Real Estate,104.35,8.0,7.7,-1.1,401036,1.7,83,106.12,95.6,9.9,day low,,+8.0% on vol > yesterday after quiet 3 days & ranges contracting
+mb,TRLV,Trulieve Cannabis Corp,Healthcare,11.1,8.0,0.82,1.0,1986777,1.0,71,11.4,10.38,8.9,day low,,+8.0% on vol > yesterday after ranges contracting
+mb,FLO,Flowers Foods Inc,Consumer Defensive,6.77,8.0,0.5,0.6,7813689,1.1,98,6.79,6.32,6.8,day low,,+8.0% on vol > yesterday after quiet 3 days & ranges contracting
+mb,TAP,Molson Coors Beverage Company,Consumer Defensive,43.23,7.8,3.11,2.0,7097667,1.8,94,43.39,40.67,6.2,day low,,+7.8% on vol > yesterday after quiet 3 days & NR7 yesterday & ranges contracting
+mb,CWK,Cushman & Wakefield Ltd,Real Estate,14.33,7.7,1.03,1.5,5072600,2.1,81,14.54,13.48,7.2,day low,,+7.7% on vol > yesterday after NR7 yesterday
+mb,THO,Thor Industries Inc,Consumer Cyclical,79.49,7.6,5.59,0.6,1040873,1.3,100,79.5,73.79,7.2,day low,,+7.6% on vol > yesterday after NR7 yesterday & ranges contracting
+mb,ALGT,Allegiant Travel,Industrials,76.58,7.3,5.24,4.2,642472,1.3,54,78.7,74.07,5.9,day low,,+7.3% on vol > yesterday after quiet 3 days & ranges contracting
+mb,ALK,Alaska Air Group Inc,Industrials,38.29,7.2,2.58,4.1,4503939,1.4,59,39.27,36.87,6.1,day low,,+7.2% on vol > yesterday after quiet 3 days & ranges contracting
+mb,ONEW,Onewater Marine Inc,Consumer Cyclical,10.31,7.0,0.67,1.9,162738,1.6,67,10.62,9.7,8.6,day low,,+7.0% on vol > yesterday after quiet 3 days & NR7 yesterday
+mb,SRAD,Sportradar Group AG,Technology,12.87,7.0,0.84,1.6,5578127,2.9,68,13.24,12.11,8.5,day low,,+7.0% on vol > yesterday after quiet 3 days & ranges contracting
+mb,KAI,Kadant Inc,Industrials,283.63,6.9,18.35,1.7,211904,1.4,78,286.77,272.75,4.9,day low,,+6.9% on vol > yesterday after quiet 3 days
+mb,MMYT,MakeMyTrip Ltd,Consumer Cyclical,45.6,6.8,2.92,1.5,590115,0.6,81,46.13,43.33,6.1,day low,,+6.8% on vol > yesterday after NR7 yesterday & ranges contracting
+mb,PAY,Paymentus Holdings Inc,Technology,35.05,6.8,2.23,0.2,1884496,1.9,93,35.27,32.44,8.0,day low,,+6.8% on vol > yesterday after quiet 3 days
+mb,IART,Integra Lifesciences Holdings Corp,Healthcare,13.61,6.7,0.86,1.8,1503388,1.5,64,13.98,12.98,7.1,day low,,+6.7% on vol > yesterday after ranges contracting
+mb,CHH,Choice Hotels International Inc,Consumer Cyclical,118.61,6.7,7.45,2.7,1375386,2.5,100,118.62,111.46,6.0,day low,,+6.7% on vol > yesterday after ranges contracting
+mb,CPA,Copa Holdings SA,Industrials,137.34,6.5,8.42,2.8,650789,2.1,73,138.97,132.85,4.4,day low,,+6.5% on vol > yesterday after quiet 3 days & NR7 yesterday
+mb,VVV,Valvoline Inc,Consumer Cyclical,34.37,6.4,2.08,1.4,4040348,1.6,97,34.44,32.69,5.0,day low,,+6.4% on vol > yesterday after quiet 3 days
+mb,BIRK,Birkenstock Holding Plc,Consumer Cyclical,35.54,6.3,2.11,1.1,2589567,1.2,89,35.77,33.71,5.8,day low,,+6.3% on vol > yesterday after NR7 yesterday
+mb,BMI,Badger Meter Inc,Technology,157.69,6.3,9.31,0.6,910947,2.1,83,159.7,147.9,7.4,day low,,+6.3% on vol > yesterday after NR7 yesterday
+mb,AAP,Advance Auto Parts Inc,Consumer Cyclical,47.92,6.2,2.81,1.7,1777128,1.0,95,48.04,45.48,5.3,day low,,+6.2% on vol > yesterday after quiet 3 days & NR7 yesterday
+mb,UPWK,Upwork Inc,Communication Services,9.72,6.2,0.57,2.0,6631403,2.6,52,10.13,9.28,8.3,day low,,+6.2% on vol > yesterday after quiet 3 days & NR7 yesterday
+mb,HLI,Houlihan Lokey Inc,Financial,146.44,6.1,8.44,1.2,1093641,1.4,93,146.95,139.29,5.2,day low,,+6.1% on vol > yesterday after NR7 yesterday
+mb,VFC,VF Corp,Consumer Cyclical,19.39,6.0,1.09,1.5,11524767,1.3,92,19.49,18.47,5.2,day low,,+6.0% on vol > yesterday after NR7 yesterday
+mb,ARE,Alexandria Real Estate Equities Inc,Real Estate,42.57,5.9,2.37,1.0,2913387,1.3,99,42.61,40.08,5.9,day low,,+5.9% on vol > yesterday after quiet 3 days
+mb,TME,Tencent Music Entertainment Group ADR,Communication Services,8.91,5.9,0.5,2.3,9725353,1.4,85,8.98,8.56,4.6,day low,,+5.9% on vol > yesterday after quiet 3 days
+mb,SHW,Sherwin-Williams Co,Basic Materials,352.37,5.9,19.76,2.5,3062499,1.8,95,353.11,338.33,4.2,day low,,+5.9% on vol > yesterday after NR7 yesterday & ranges contracting
+mb,BYD,Boyd Gaming Corp,Consumer Cyclical,77.04,5.8,4.21,1.4,1322657,1.2,91,77.43,73.16,5.5,day low,,+5.8% on vol > yesterday after quiet 3 days
+mb,HOV,Hovnanian Enterprises Inc,Consumer Cyclical,104.92,5.5,5.51,1.6,130332,1.0,67,106.0,102.74,3.1,day low,,+5.5% on vol > yesterday after ranges contracting
+mb,STN,Stantec Inc,Industrials,76.28,5.5,3.97,0.5,364323,1.1,82,77.08,72.67,5.7,day low,,+5.5% on vol > yesterday after quiet 3 days & ranges contracting
+mb,TOST,Toast Inc,Technology,33.42,5.5,1.74,1.5,11343884,1.4,51,34.67,32.15,7.2,day low,,+5.5% on vol > yesterday after quiet 3 days
+mb,REAX,Real REMAX Group Inc,Real Estate,14.78,5.5,0.77,1.6,722372,0.9,58,15.26,14.14,7.3,day low,,+5.5% on vol > yesterday after ranges contracting
+mb,GOLD,Gold.com Inc,Financial,40.14,5.5,2.11,2.3,798746,1.4,74,40.78,38.37,5.9,day low,,+5.5% on vol > yesterday after quiet 3 days
+mb,APPF,Appfolio Inc,Technology,224.86,5.4,11.61,1.8,426619,1.2,62,231.4,214.05,7.5,day low,,+5.4% on vol > yesterday after ranges contracting
+mb,AHRT,AH Realty Trust Inc,Real Estate,6.4,5.3,0.32,0.8,1670789,1.8,70,6.54,6.11,6.4,day low,,+5.3% on vol > yesterday after quiet 3 days & ranges contracting
+mb,BF-A,Brown-Forman Corp,Consumer Defensive,30.96,5.3,1.56,1.4,149260,1.0,91,31.11,29.62,4.8,day low,,+5.3% on vol > yesterday after quiet 3 days
+mb,ONON,On Holding AG,Consumer Cyclical,35.52,5.2,1.74,1.5,10289391,1.0,79,35.89,34.2,4.7,day low,,+5.2% on vol > yesterday after NR7 yesterday
+mb,PRMB,Primo Brands Corp,Consumer Defensive,20.77,5.2,1.03,1.5,6719440,1.5,95,20.83,19.99,4.0,day low,,+5.2% on vol > yesterday after quiet 3 days & ranges contracting
+mb,TRTX,TPG RE Finance Trust Inc,Real Estate,6.83,5.1,0.33,0.5,2401417,1.9,87,6.89,6.5,5.5,day low,,+5.1% on vol > yesterday after NR7 yesterday
+mb,GRFS,Grifols SA ADR,Healthcare,8.51,5.1,0.41,2.5,1586503,2.7,79,8.59,8.25,3.8,day low,,+5.1% on vol > yesterday after quiet 3 days
+mb,BBUC,Brookfield Business Corp,Industrials,30.06,5.1,1.46,2.1,570948,1.7,86,30.32,28.47,6.1,day low,,+5.1% on vol > yesterday after quiet 3 days & NR7 yesterday
+mb,URGN,UroGen Pharma Ltd,Healthcare,34.36,5.0,1.64,0.7,2037518,2.3,79,34.89,32.46,6.9,day low,,+5.0% on vol > yesterday after quiet 3 days & ranges contracting
+mb,MEC,Mayville Engineering Company Inc,Industrials,15.77,5.0,0.75,1.7,625247,1.2,50,16.27,15.27,6.1,day low,,+5.0% on vol > yesterday after NR7 yesterday
+mb,BEP,Brookfield Renewable Partners LP,Utilities,30.05,4.9,1.4,0.7,2379866,2.2,90,30.2,28.69,5.0,day low,,+4.9% on vol > yesterday after quiet 3 days
+mb,ACI,Albertsons Companies Inc,Consumer Defensive,13.72,4.9,0.64,-0.4,10174481,1.2,83,13.87,13.04,5.9,day low,,+4.9% on vol > yesterday after NR7 yesterday
+mb,RELY,Remitly Global Inc,Technology,25.33,4.9,1.18,0.2,3019926,0.9,69,25.87,24.15,6.6,day low,,+4.9% on vol > yesterday after quiet 3 days
+mb,FCN,FTI Consulting Inc,Industrials,191.77,4.9,8.93,-0.1,731770,1.7,80,194.5,181.16,6.9,day low,,+4.9% on vol > yesterday after NR7 yesterday
+mb,ACEL,Accel Entertainment Inc,Consumer Cyclical,11.91,4.8,0.55,1.1,596964,1.6,72,12.09,11.48,5.0,day low,,+4.8% on vol > yesterday after quiet 3 days & NR7 yesterday & ranges contracting
+mb,BEPC,Brookfield Renewable Corp,Utilities,30.54,4.8,1.39,0.7,3077616,1.6,87,30.76,29.12,5.3,day low,,+4.8% on vol > yesterday after quiet 3 days
+mb,PPHC,Public Policy Holding Company Inc,Industrials,10.84,4.8,0.5,1.1,118689,0.6,60,11.19,10.33,7.6,day low,,+4.8% on vol > yesterday after quiet 3 days
+mb,IIIV,i3 Verticals Inc,Technology,18.42,4.8,0.84,-0.1,456890,1.0,92,18.5,17.57,5.0,day low,,+4.8% on vol > yesterday after quiet 3 days
+mb,AX,Axos Financial Inc,Financial,94.71,4.8,4.33,2.7,547840,1.5,60,96.42,92.19,4.4,day low,,+4.8% on vol > yesterday after quiet 3 days
+mb,CODI,Compass Diversified Holdings,Industrials,11.67,4.7,0.52,0.9,752568,1.3,77,11.79,11.28,4.3,day low,,+4.7% on vol > yesterday after NR7 yesterday
+mb,LEN,Lennar Corp,Consumer Cyclical,91.02,4.7,4.08,1.1,4200998,0.9,83,91.78,87.39,4.8,day low,,+4.7% on vol > yesterday after quiet 3 days & ranges contracting
+mb,ALSN,Allison Transmission Holdings Inc,Consumer Cyclical,113.09,4.7,5.04,1.5,1287334,1.7,97,113.24,109.03,3.7,day low,,+4.7% on vol > yesterday after quiet 3 days & ranges contracting
+mb,EXPE,Expedia Group Inc,Consumer Cyclical,298.99,4.6,13.06,2.1,2011855,1.1,83,301.01,289.17,3.9,day low,,+4.6% on vol > yesterday after NR7 yesterday & ranges contracting
+mb,MRP,Millrose Properties Inc,Real Estate,26.81,4.6,1.19,1.5,2587397,1.0,98,26.84,25.81,3.8,day low,,+4.6% on vol > yesterday after ranges contracting
+mb,LW,Lamb Weston Holdings Inc,Consumer Defensive,56.58,4.6,2.5,1.4,2409205,1.1,95,56.7,54.35,4.1,day low,,+4.6% on vol > yesterday after quiet 3 days & ranges contracting
+mb,ELAN,Elanco Animal Health Inc,Healthcare,24.1,4.5,1.04,2.1,6539678,1.3,86,24.24,23.31,3.8,day low,,+4.5% on vol > yesterday after ranges contracting
+mb,LBTYA,Liberty Global Ltd,Communication Services,8.12,4.5,0.35,0.6,4716824,1.4,81,8.2,7.79,4.9,day low,,+4.5% on vol > yesterday after quiet 3 days & ranges contracting
+mb,DEO,Diageo plc ADR,Consumer Defensive,97.63,4.5,4.19,2.2,1312459,1.3,96,97.73,95.42,2.4,day low,,+4.5% on vol > yesterday after quiet 3 days
+mb,BUD,Anheuser-Busch InBev SA/NV ADR,Consumer Defensive,83.97,4.5,3.59,2.3,2717015,1.2,93,84.12,82.11,2.4,day low,,+4.5% on vol > yesterday after quiet 3 days
+mb,JJSF,J&J Snack Foods Corp,Consumer Defensive,89.18,4.4,3.79,0.5,213459,1.1,96,89.33,85.83,3.9,day low,,+4.4% on vol > yesterday after quiet 3 days & ranges contracting
+mb,MMS,Maximus Inc,Industrials,66.55,4.4,2.83,-0.8,501559,0.8,93,66.75,64.11,3.9,day low,,+4.4% on vol > yesterday after quiet 3 days & ranges contracting
+mb,ARCB,ArcBest Corp,Industrials,130.96,4.4,5.52,2.2,310624,1.4,69,132.94,126.51,4.8,day low,,+4.4% on vol > yesterday after NR7 yesterday
+mb,ZTS,Zoetis Inc,Healthcare,83.18,4.3,3.46,0.5,5410590,1.3,99,83.23,79.89,4.0,day low,,+4.3% on vol > yesterday after quiet 3 days & ranges contracting
+mb,EFX,Equifax Inc,Industrials,192.51,4.3,7.91,0.4,2164378,1.2,85,193.69,185.65,4.1,day low,,+4.3% on vol > yesterday after ranges contracting
+mb,DKNG,DraftKings Inc,Consumer Cyclical,21.81,4.3,0.9,0.7,11629115,0.9,81,22.08,20.67,6.3,day low,,+4.3% on vol > yesterday after quiet 3 days
+mb,REYN,Reynolds Consumer Products Inc,Consumer Cyclical,24.65,4.3,1.02,1.1,1343788,1.0,96,24.69,23.77,3.7,day low,,+4.3% on vol > yesterday after quiet 3 days
+mb,WSO,Watsco Inc,Industrials,316.71,4.3,13.15,1.4,787879,1.4,95,317.33,304.08,4.2,day low,,+4.3% on vol > yesterday after NR7 yesterday
+mb,SPB,Spectrum Brands Holdings Inc,Consumer Defensive,86.96,4.2,3.52,1.7,330582,1.1,83,87.56,84.1,3.9,day low,,+4.2% on vol > yesterday after quiet 3 days
+mb,AS,Amer Sports Inc,Consumer Cyclical,30.67,4.2,1.24,1.1,5105605,0.8,71,31.1,29.63,4.7,day low,,+4.2% on vol > yesterday after NR7 yesterday
+mb,ABNB,Airbnb Inc,Consumer Cyclical,171.11,4.1,6.72,2.0,5944728,1.4,70,173.06,166.51,3.8,day low,,+4.1% on vol > yesterday after quiet 3 days & NR7 yesterday & ranges contracting
+mb,RYN,Rayonier Inc,Real Estate,20.17,4.1,0.79,0.4,4520650,1.2,78,20.39,19.45,4.5,day low,,+4.1% on vol > yesterday after quiet 3 days
+mb,DAL,Delta Air Lines Inc,Industrials,83.42,4.1,3.27,3.6,7499598,1.1,64,84.08,82.24,2.2,day low,,+4.1% on vol > yesterday after quiet 3 days & ranges contracting
+mb,ITRI,Itron Inc,Technology,99.77,4.1,3.95,1.4,922820,1.5,76,100.62,97.08,3.5,day low,,+4.1% on vol > yesterday after quiet 3 days & NR7 yesterday
+mb,KTB,Kontoor Brands Inc,Consumer Cyclical,77.3,4.1,3.05,3.6,1194701,1.7,57,79.63,74.25,6.7,day low,,+4.1% on vol > yesterday after quiet 3 days
+mb,LZB,La-Z-Boy Inc,Consumer Cyclical,31.7,4.1,1.26,0.9,728209,1.0,66,32.23,30.68,4.8,day low,,+4.1% on vol > yesterday after ranges contracting
+mb,BOC,Boston Omaha Corp,Industrials,13.46,4.0,0.52,-0.9,228664,1.6,75,13.62,13.01,4.4,day low,,+4.0% on vol > yesterday after quiet 3 days & ranges contracting
+mb,LBTYK,Liberty Global Ltd,Communication Services,7.99,4.0,0.31,0.1,1883470,1.0,89,8.04,7.68,4.4,day low,,+4.0% on vol > yesterday after quiet 3 days & ranges contracting
+mb,ZGN,Ermenegildo Zegna NV,Consumer Cyclical,14.03,4.0,0.54,1.3,1120198,1.0,93,14.07,13.53,3.8,day low,,+4.0% on vol > yesterday after quiet 3 days & NR7 yesterday & ranges contracting
+vb,TATT,TAT Technologies Ltd,Industrials,37.41,17.6,5.61,9.1,620554,5.2,72,38.63,34.3,11.2,day low,earnings 2026-11-02 pre-market,"5.2× avg volume, closed at 72% of range"
+vb,ASUR,Asure Software Inc,Technology,9.9,5.2,0.49,6.1,681623,4.6,86,9.99,9.41,5.7,day low,,"4.6× avg volume, closed at 86% of range"
+vb,III,Information Services Group Inc,Technology,6.28,3.0,0.18,-5.7,914550,4.2,91,6.38,5.34,16.2,day low,,"4.2× avg volume, closed at 91% of range"
+vb,GDYN,Grid Dynamics Holdings Inc,Technology,13.69,2.5,0.33,-0.8,4369234,3.9,71,14.03,12.88,8.1,day low,,"3.9× avg volume, closed at 71% of range"
+vb,STFS,Star Fashion Culture Holdings Ltd,Communication Services,5.06,3.7,0.18,1.4,1592963,3.8,87,5.1,4.85,4.7,day low,,"3.8× avg volume, closed at 87% of range"
+vb,IDXX,Idexx Laboratories Inc,Healthcare,671.64,21.8,120.43,13.4,1944992,3.8,97,673.2,620.2,7.9,day low,earnings 2026-11-02 pre-market,"3.8× avg volume, highest volume in a year, closed at 97% of range"
+vb,LSCC,Lattice Semiconductor Corp,Technology,95.44,2.7,2.47,2.2,6477617,3.7,70,97.63,90.25,7.5,day low,,"3.7× avg volume, highest volume in a year, closed at 70% of range"
+vb,CWEN,Clearway Energy Inc,Utilities,33.9,5.8,1.87,1.4,4245330,3.6,94,34.01,32.35,4.9,day low,,"3.6× avg volume, closed at 94% of range"
+vb,REPL,Replimune Group Inc,Healthcare,19.49,10.7,1.88,0.8,7720254,3.4,91,19.68,17.67,10.2,day low,,"3.4× avg volume, closed at 91% of range"
+vb,SFM,Sprouts Farmers Market Inc,Consumer Defensive,55.23,11.1,5.53,0.6,8664146,3.3,93,55.61,50.0,10.1,day low,,"3.3× avg volume, closed at 93% of range"
+vb,LOAR,Loar Holdings Inc,Industrials,67.91,9.3,5.8,5.3,2302532,3.2,72,69.33,64.24,7.3,day low,,"3.2× avg volume, closed at 72% of range"
+ant,SLN,Silence Therapeutics Plc ADR,Healthcare,19.76,0.1,0.01,0.0,1186290,0.4,20,19.81,19.71,0.5,3-day low,,"NR4, inside day, 3-day range 0.5%, 3 closes > 20D MA, -0.5% from 52w high"
+ant,BMBL,Bumble Inc,Communication Services,5.97,-0.3,-0.02,-0.2,2372725,0.4,0,6.0,5.96,0.7,3-day low,,"NR7, inside day, 3-day range 0.5%, 3 closes > 20D MA, -0.5% from 52w high"
+ant,UFCS,United Fire Group Inc,Financial,57.08,0.4,0.25,0.6,127526,1.0,53,57.95,56.56,2.4,3-day low,,"NR4, inside day, 3-day range 2.4%, 3 closes > 20D MA, -1.9% from 52w high"
+ant,TRV,Travelers Companies Inc,Financial,398.8,0.7,2.58,0.5,1339166,1.0,78,404.45,394.1,2.6,3-day low,,"NR4, 3-day range 2.6%, 3 closes > 20D MA, -2.2% from 52w high"
+ant,CRVL,Corvel Corp,Financial,83.23,1.2,1.01,0.6,171993,0.9,41,83.95,81.71,2.7,3-day low,,"NR4, 3-day range 2.7%, 3 closes > 20D MA, -2.3% from 52w high"
+ant,BDX,Becton Dickinson & Co,Healthcare,198.6,0.4,0.72,-0.2,1783239,1.1,51,199.95,194.53,2.7,3-day low,,"NR4, inside day, 3-day range 2.8%, 3 closes > 20D MA, -0.9% from 52w high"
+ant,RL,Ralph Lauren Corp,Consumer Cyclical,397.53,1.2,4.66,1.3,630914,1.0,39,403.97,392.09,2.9,3-day low,,"inside day, 3-day range 3.0%, 3 closes > 20D MA, -5.7% from 52w high"
+ant,IDT,IDT Corp,Communication Services,82.27,0.3,0.25,0.0,185046,0.7,56,83.49,81.11,2.9,3-day low,,"inside day, 3-day range 2.9%, 3 closes > 20D MA, -2.7% from 52w high"
+ant,PFG,Principal Financial Group Inc,Financial,112.81,1.1,1.18,0.6,1210513,0.9,39,114.01,110.56,3.0,3-day low,,"inside day, 3-day range 3.1%, 3 closes > 20D MA, -6.9% from 52w high"
+ant,FAST,Fastenal Co,Industrials,52.55,1.2,0.64,1.5,6231831,0.9,14,53.31,51.71,3.0,3-day low,,"inside day, 3-day range 3.1%, 3 closes > 20D MA, -1.4% from 52w high"
+ant,CACI,Caci International Inc,Technology,680.5,0.7,4.88,-0.2,199993,0.8,76,689.16,666.95,3.2,3-day low,,"inside day, 3-day range 3.3%, 3 closes > 20D MA, -1.3% from 52w high"
+ant,HAS,Hasbro Inc,Consumer Cyclical,118.36,-0.6,-0.73,0.3,1898152,0.9,9,120.96,117.14,3.2,3-day low,,"NR7, inside day, 3-day range 3.3%, 3 closes > 20D MA, -2.2% from 52w high"
+ant,KOF,Coca-Cola Femsa SAB de CV ADR,Consumer Defensive,117.05,1.2,1.37,1.1,150473,0.8,18,118.2,114.26,3.3,3-day low,,"NR7, 3-day range 3.4%, 3 closes > 20D MA, -4.2% from 52w high"
+ant,GEF,Greif Inc,Consumer Cyclical,82.82,1.0,0.83,0.7,361379,1.0,27,83.9,80.95,3.5,3-day low,,"NR7, 3-day range 3.6%, 3 closes > 20D MA, -8.6% from 52w high"
+ant,URI,United Rentals Inc,Industrials,1175.42,0.5,5.37,1.7,501952,1.0,3,1202.13,1160.57,3.5,3-day low,,"inside day, 3-day range 3.6%, 3 closes > 20D MA, -2.2% from 52w high"
+ant,MTN,Vail Resorts Inc,Consumer Cyclical,154.82,2.0,2.99,1.9,629913,0.8,77,156.68,150.81,3.7,3-day low,,"inside day, 3-day range 3.9%, 3 closes > 20D MA, -5.2% from 52w high"
+ant,SBUX,Starbucks Corp,Consumer Cyclical,104.4,0.7,0.73,0.7,9797040,1.2,76,106.26,102.24,3.8,3-day low,,"inside day, 3-day range 3.9%, 3 closes > 20D MA, -5.5% from 52w high"
+ant,AMGN,AMGEN Inc,Healthcare,465.45,-0.1,-0.56,-0.6,3166076,1.1,56,475.66,457.36,3.8,3-day low,,"NR4, 3-day range 4.0%, 3 closes > 20D MA, -2.1% from 52w high"
+ant,WELL,Welltower Inc,Real Estate,239.0,1.9,4.4,0.0,2679422,1.0,97,239.31,230.24,3.8,3-day low,,"inside day, 3-day range 3.9%, 3 closes > 20D MA, -6.3% from 52w high"
+db,IDXX,Idexx Laboratories Inc,Healthcare,671.64,21.8,120.43,13.4,1944992,3.8,97,673.2,620.2,7.9,day low,earnings 2026-11-02 pre-market,+$120.43 on 3.8× avg volume
+db,TDG,Transdigm Group Incorporated,Industrials,1213.62,5.8,66.81,1.8,465325,1.2,100,1213.63,1162.39,4.2,day low,,+$66.81 on 1.2× avg volume
+db,MELI,MercadoLibre Inc,Consumer Cyclical,1676.79,3.2,52.26,1.3,616950,1.1,60,1707.55,1631.0,4.5,day low,,+$52.26 on 1.1× avg volume
+db,CVCO,Cavco Industries Inc,Consumer Cyclical,662.89,7.1,43.89,4.1,126216,1.2,80,667.73,643.13,3.7,day low,,+$43.89 on 1.2× avg volume
+db,REGN,Regeneron Pharmaceuticals Inc,Healthcare,961.26,3.6,33.37,-0.1,1656511,2.3,73,974.01,927.0,4.8,day low,,+$33.37 on 2.3× avg volume
+db,PH,Parker-Hannifin Corp,Industrials,928.29,3.2,28.47,1.6,846440,1.4,76,937.9,897.93,4.3,day low,,+$28.47 on 1.4× avg volume
+db,COST,Costco Wholesale Corp,Consumer Defensive,1040.55,2.8,28.27,0.4,3103899,1.4,93,1042.57,1014.34,2.7,day low,,+$28.27 on 1.4× avg volume
+db,MA,Mastercard Incorporated,Financial,658.1,3.1,20.09,0.0,3971294,1.4,86,661.35,638.25,3.5,day low,,+$20.09 on 1.4× avg volume
+db,SAM,Boston Beer Co Inc,Consumer Defensive,221.37,10.0,20.06,-0.2,345794,1.5,97,222.02,200.81,9.5,day low,,+$20.06 on 1.5× avg volume
+db,SHW,Sherwin-Williams Co,Basic Materials,352.37,5.9,19.76,2.5,3062499,1.8,95,353.11,338.33,4.2,day low,,+$19.76 on 1.8× avg volume
+db,JLL,Jones Lang Lasalle Inc,Real Estate,379.29,5.4,19.5,1.4,714795,1.7,61,387.69,366.06,5.6,day low,,+$19.50 on 1.7× avg volume
+db,KAI,Kadant Inc,Industrials,283.63,6.9,18.35,1.7,211904,1.4,78,286.77,272.75,4.9,day low,,+$18.35 on 1.4× avg volume
+db,HEI,Heico Corp,Industrials,337.59,5.1,16.23,0.6,552709,1.1,96,338.3,322.58,4.6,day low,,+$16.23 on 1.1× avg volume
+db,SYK,Stryker Corp,Healthcare,306.81,5.1,14.95,0.8,3732757,1.3,93,307.9,293.0,4.8,day low,,+$14.95 on 1.3× avg volume
+db,WWD,Woodward Inc,Industrials,319.57,4.9,14.92,1.9,793061,1.2,64,325.0,310.12,4.6,day low,,+$14.92 on 1.2× avg volume
+db,LPLA,LPL Financial Holdings Inc,Financial,298.63,5.2,14.89,1.1,1398484,1.6,94,299.49,285.81,4.6,day low,,+$14.89 on 1.6× avg volume
+db,FDS,Factset Research Systems Inc,Financial,343.74,4.3,14.17,0.1,873987,1.1,91,345.67,325.35,5.9,day low,,+$14.17 on 1.1× avg volume
+db,GE,GE Aerospace,Industrials,315.78,4.6,13.98,2.5,4815191,1.1,88,316.8,308.17,2.7,day low,,+$13.98 on 1.1× avg volume
+db,RCL,Royal Caribbean Group,Consumer Cyclical,321.07,4.5,13.89,2.5,2777563,1.1,66,324.56,314.32,3.2,day low,,+$13.89 on 1.1× avg volume
+db,HWM,Howmet Aerospace Inc,Industrials,212.99,6.9,13.77,1.7,5304984,1.5,94,213.76,201.95,5.5,day low,,+$13.77 on 1.5× avg volume
+db,CBOE,Cboe Global Markets Inc,Financial,349.22,4.1,13.69,0.2,1266779,1.1,86,351.59,334.67,4.8,day low,,+$13.69 on 1.1× avg volume
+db,BRK-B,Berkshire Hathaway Inc,Financial,556.11,2.5,13.62,0.5,5801049,1.3,93,556.96,544.94,2.2,day low,,+$13.62 on 1.3× avg volume
+db,WING,Wingstop Inc,Consumer Cyclical,163.04,8.9,13.31,2.5,2940794,2.2,58,170.38,152.89,10.3,day low,,+$13.31 on 2.2× avg volume
+db,WSO,Watsco Inc,Industrials,316.71,4.3,13.15,1.4,787879,1.4,95,317.33,304.08,4.2,day low,,+$13.15 on 1.4× avg volume
+db,EXPE,Expedia Group Inc,Consumer Cyclical,298.99,4.6,13.06,2.1,2011855,1.1,83,301.01,289.17,3.9,day low,,+$13.06 on 1.1× avg volume
+db,ROP,Roper Technologies Inc,Technology,479.54,2.8,12.94,-0.2,1158590,1.3,78,484.18,463.14,4.3,day low,,+$12.94 on 1.3× avg volume
+db,MORN,Morningstar Inc,Financial,238.73,5.5,12.54,0.0,283661,1.0,87,240.55,226.23,5.9,day low,,+$12.54 on 1.0× avg volume
+db,ERIE,Erie Indemnity Co,Financial,273.93,4.8,12.54,0.5,246562,1.0,76,277.55,262.69,5.4,day low,,+$12.54 on 1.0× avg volume
+db,FCFS,FirstCash Holdings Inc,Financial,193.71,6.9,12.46,1.8,598827,1.2,94,194.32,184.48,5.1,day low,,+$12.46 on 1.2× avg volume
+db,VSEC,VSE Corp,Industrials,160.21,8.4,12.38,2.8,476364,1.1,80,162.3,151.79,6.5,day low,,+$12.38 on 1.1× avg volume
+db,MCO,Moody's Corp,Financial,506.02,2.5,12.11,0.7,924375,1.1,76,509.28,495.65,2.7,day low,,+$12.11 on 1.1× avg volume
+db,HD,Home Depot Inc,Consumer Cyclical,341.15,3.6,11.95,1.5,4759645,1.0,95,341.55,333.0,2.5,day low,,+$11.95 on 1.0× avg volume
+db,V,Visa Inc,Financial,425.51,2.9,11.92,0.5,7401521,1.2,90,426.79,414.37,2.9,day low,,+$11.92 on 1.2× avg volume
+db,EXP,Eagle Materials Inc,Basic Materials,195.52,6.5,11.88,2.4,794637,1.9,95,195.89,187.99,4.0,day low,,+$11.88 on 1.9× avg volume
+db,NXT,Nextpower Inc,Technology,91.13,14.9,11.8,5.1,5505407,2.5,81,92.99,83.32,10.4,day low,,+$11.80 on 2.5× avg volume
+db,RNR,RenaissanceRe Holdings Ltd,Financial,350.94,3.4,11.62,0.5,749017,2.0,76,354.29,340.58,3.9,day low,,+$11.62 on 2.0× avg volume
+db,APPF,Appfolio Inc,Technology,224.86,5.4,11.61,1.8,426619,1.2,62,231.4,214.05,7.5,day low,,+$11.61 on 1.2× avg volume
+db,ITW,Illinois Tool Works Inc,Industrials,290.05,4.1,11.5,1.2,1554075,1.2,96,290.51,280.13,3.6,day low,,+$11.50 on 1.2× avg volume
+db,HUBB,Hubbell Inc,Industrials,433.74,2.7,11.3,1.2,580164,1.1,74,436.52,425.73,2.5,day low,,+$11.30 on 1.1× avg volume
+db,RS,Reliance Inc,Basic Materials,448.08,2.6,11.17,1.4,361450,1.2,58,454.94,438.63,3.6,day low,,+$11.17 on 1.2× avg volume
+db,MGRC,McGrath Rentcorp,Industrials,129.44,9.4,11.16,4.4,1246928,8.2,69,132.89,121.83,8.3,day low,,+$11.16 on 8.2× avg volume
+db,DASH,DoorDash Inc,Consumer Cyclical,190.07,6.2,11.08,1.2,5964475,1.5,93,191.03,177.0,7.3,day low,,+$11.08 on 1.5× avg volume
+db,RBC,RBC Bearings Inc,Industrials,473.05,2.3,10.84,1.8,540406,1.8,62,478.29,464.64,2.9,day low,,+$10.84 on 1.8× avg volume
+db,TYL,Tyler Technologies Inc,Technology,403.94,2.4,9.64,-1.1,1261623,1.5,75,409.47,387.0,5.5,day low,,+$9.64 on 1.5× avg volume
+db,LII,Lennox International Inc,Industrials,353.64,2.8,9.56,0.1,958260,1.7,91,354.41,345.7,2.5,day low,,+$9.56 on 1.7× avg volume
+db,SNA,Snap-on Inc,Industrials,365.07,2.6,9.41,1.2,436723,1.3,86,366.4,356.83,2.6,day low,,+$9.41 on 1.3× avg volume
+db,BMI,Badger Meter Inc,Technology,157.69,6.3,9.31,0.6,910947,2.1,83,159.7,147.9,7.4,day low,,+$9.31 on 2.1× avg volume
+db,MHK,Mohawk Industries Inc,Consumer Cyclical,148.58,6.6,9.17,3.1,2520758,2.2,68,151.25,143.0,5.5,day low,,+$9.17 on 2.2× avg volume
+db,LOW,Lowe's Cos. Inc,Consumer Cyclical,218.15,4.3,9.08,1.4,3692644,1.1,99,218.25,212.09,2.8,day low,,+$9.08 on 1.1× avg volume
+db,FCN,FTI Consulting Inc,Industrials,191.77,4.9,8.93,-0.1,731770,1.7,80,194.5,181.16,6.9,day low,,+$8.93 on 1.7× avg volume
+db,AXP,American Express Co,Financial,327.98,2.8,8.87,1.2,3190111,1.1,71,329.98,323.05,2.1,day low,,+$8.87 on 1.1× avg volume
+db,POOL,Pool Corp,Industrials,214.76,4.3,8.81,1.4,1040835,1.3,78,217.01,206.99,4.6,day low,,+$8.81 on 1.3× avg volume
+db,ABG,Asbury Automotive Group Inc,Consumer Cyclical,206.67,4.4,8.64,1.0,489245,1.7,85,207.87,199.81,3.9,day low,,+$8.64 on 1.7× avg volume
+db,PSA,Public Storage,Real Estate,333.24,2.6,8.47,0.6,1201381,1.4,79,335.19,325.8,2.8,day low,,+$8.47 on 1.4× avg volume
+db,HLI,Houlihan Lokey Inc,Financial,146.44,6.1,8.44,1.2,1093641,1.4,93,146.95,139.29,5.2,day low,,+$8.44 on 1.4× avg volume
+db,CPA,Copa Holdings SA,Industrials,137.34,6.5,8.42,2.8,650789,2.1,73,138.97,132.85,4.4,day low,,+$8.42 on 2.1× avg volume
+db,DOV,Dover Corp,Industrials,215.91,3.9,8.17,1.3,1952600,1.5,97,216.13,209.66,3.0,day low,,+$8.17 on 1.5× avg volume
