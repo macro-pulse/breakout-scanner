@@ -8,13 +8,13 @@
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#0B1220">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/style.css?v=202611020900">
 </head><body>
 <header class="top"><div class="wrap hdr">
  <div class="brand"><img src="assets/favicon.svg" alt="" width="28" height="28"><div><h1>Undervalued Breakout Scanner</h1><p class="sub">End-of-day equity screen · Value × Setup</p></div></div>
  <dl class="hmeta"><div><dt>Data as of</dt><dd id="hdate">–</dd></div><div><dt>Universe</dt><dd id="huni">–</dd></div><div><dt>Generated</dt><dd id="hgen">–</dd></div></dl>
 </div>
-<nav class="wrap tabs"><a href="#picks">Top Picks</a><a href="#gems">Gems 💎</a><a href="#vol">Volume Breakouts</a><a href="#kiss">Kissing MA</a><a href="#ath">All-Time Highs</a><a href="#major">Major Levels</a><a href="#ai">AI Watchlist</a><a href="#all">Screener</a><a href="#breadth">Breadth</a><a href="#method">Methodology</a><a href="data/scan.csv" download>Export CSV</a></nav>
+<nav class="wrap tabs"><a href="#picks">Top Picks</a><a href="#gems">Gems 💎</a><a href="#vol">Volume Breakouts</a><a href="#kiss">Kissing MA</a><a href="#ath">All-Time Highs</a><a href="#major">Major Levels</a><a href="#ai">AI Watchlist</a><a href="#all">Screener</a><a href="#breadth">Breadth</a><a href="#bonde">Bonde setups 🚀</a><a href="#gappers">Gappers ⚡ (pre-market)</a><a href="#method">Methodology</a><a href="data/scan.csv" download>Export CSV</a></nav>
 </header>
 <main class="wrap">
 <section class="kpis" id="kpis">
@@ -66,6 +66,12 @@
 <li><b>Zweig Breadth Thrust</b> 10-day EMA of adv/(adv+dec) moving from below 40% to above 61.5% within 10 days, a rare and bullish signal.</li>
 <li><b>Regime rule (transparent)</b> one point each for: 10d ratio ≥ 1.5, T2108 ≥ 50, %>50D ≥ 50, %>200D ≥ 50, McClellan &gt; 0, NH−NL &gt; 0. 5–6 = Bullish, 2–4 = Neutral, 0–1 = Bearish.</li>
 </ul></section>
+<section id="bonde" class="panel"><div class="ph"><h2>Bonde setups 🚀 (Pradeep Bonde / Stockbee style)</h2><p id="bnmeta">Loading…</p></div>
+<div class="bnnote"><b>Education, not advice.</b> Entry = a move above the day's high. Stop = the day's low (EP-day low for pivots, 3-day low for anticipation). Many breakouts fail, so keep size small and honor the stop.</div>
+<div id="bonde-body"></div><p class="gaps" id="bngaps"></p></section>
+<section id="gappers" class="panel"><div class="ph"><h2>Gappers ⚡ (pre-market)</h2><p id="gpmeta">Loading…</p></div>
+<div class="bnnote"><b>How to trade it (plain English).</b> 1) Don't buy at the open bell. Wait for the first 5 minutes to finish. 2) Mark the high and low of that first 5-minute candle (the "opening range"). 3) Gap-up: buy only if price breaks above the 5-min high <i>and</i> stays above VWAP. Stop goes at the 5-min low. 4) If it loses VWAP, get out. 5) Use small size, since gappers move fast. Gap-downs: the mirror image (below the 5-min low, under VWAP), for experienced traders only. <b>Education, not advice.</b></div>
+<div id="gp-body"></div><p class="gaps" id="gpgaps"></p></section>
 <section id="method" class="panel"><div class="ph"><h2>Methodology</h2></div><ul class="method">
 <li><b>Universe</b> AI watchlist (stocks and ETFs) + S&amp;P 500 + Nasdaq-100 + S&amp;P 400. Non-watchlist names require price &gt; $5 and 50-day average dollar volume &gt; $20M. Fundamentals via Finviz; daily OHLCV via Yahoo Finance.</li>
 <li><b>Tight range</b> 20-day high–low range ≤ max(12%, 3.5 × ATR14%) and Bollinger width in the bottom 25% of its 1-year history or ATR(14)% down 15%+ vs 20 days ago. Also tracked: NR7, inside days, volume dry-up.</li>
@@ -81,6 +87,8 @@
 </ul><p class="gaps" id="gaps"></p></section>
 </main>
 <footer class="wrap foot"><p><b>For informational purposes only. Not investment advice.</b> Mechanical screen built from end-of-day data, which may be delayed or contain errors. Levels shown are not recommendations; do your own research.</p></footer>
-<script src="assets/app.js"></script>
-<script src="assets/breadth.js"></script>
+<script src="assets/app.js?v=202611020900"></script>
+<script src="assets/breadth.js?v=202611020900"></script>
+<script src="assets/bonde.js?v=202611020900"></script>
+<script src="assets/gappers.js?v=202611020900"></script>
 </body></html>
