@@ -56,3 +56,17 @@ input[type=search]{min-width:240px}input[type=search]:focus,select:focus{outline
 .bchart{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:10px}.bchart h4{margin:0 0 6px;font-size:13px;color:var(--mut);font-weight:600}.bchart h4 b{color:var(--tx);float:right}.bchart svg{width:100%;height:130px;display:block}
 .sbtbl td,.sbtbl th{text-align:right;white-space:nowrap}.sbtbl td:first-child,.sbtbl th:first-child{text-align:left}
 .sbtbl td.g1{background:rgba(74,222,128,.14)}.sbtbl td.g2{background:rgba(74,222,128,.32);color:#fff;font-weight:700}.sbtbl td.r1{background:rgba(248,113,113,.14)}.sbtbl td.r2{background:rgba(248,113,113,.32);color:#fff;font-weight:700}
+.bnnote{margin:12px 20px;padding:10px 14px;border-radius:8px;background:rgba(251,191,36,.08);border:1px solid rgba(251,191,36,.3);color:#FDE68A;font-size:13px}
+.bnchips{display:flex;flex-wrap:wrap;gap:8px;padding:4px 20px 12px}.bnchip{padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600;color:var(--tx);border:1px solid var(--c);background:color-mix(in srgb,var(--c) 16%,transparent)}.bnchip b{margin-left:4px;color:var(--c)}
+.c-ep{--c:#F472B6}.c-epe{--c:#A78BFA}.c-mb{--c:#FBBF24}.c-vb{--c:#38BDF8}.c-ant{--c:#4ADE80}.c-db{--c:#FB923C}
+.bnset{margin:0 20px 18px;border:1px solid var(--line);border-left:4px solid var(--c);border-radius:8px;background:linear-gradient(90deg,color-mix(in srgb,var(--c) 9%,transparent),transparent 60%);scroll-margin-top:120px}
+.bnh{padding:12px 16px}.bnh h3{margin:0;font-size:15px;color:var(--c)}.bnh h3 span{font-size:12px;color:var(--mut);font-weight:500;margin-left:6px}.bnh p{margin:4px 0 0;font-size:13px;color:#c3cddc}.bnh .bnrule{color:var(--mut);font-size:12px;font-family:var(--mono)}
+.bntbl th{background:color-mix(in srgb,var(--c) 18%,var(--panel2))}.bntbl tbody tr:nth-child(even) td{background:rgba(255,255,255,.02)}.bntbl td.tk{color:var(--c)}
+.bntbl td.why{white-space:normal;min-width:260px;color:#c3cddc;font-size:12.5px}.bntbl td.hot{color:#fff;font-weight:700;background:color-mix(in srgb,var(--c) 22%,transparent)}
+.bntbl td.ent{color:var(--up);font-weight:600}.bntbl td.stp{color:var(--dn);font-weight:600}.bntbl td.stp small{color:var(--mut);font-weight:400}
+
+/* TradingView ticker links */
+a.tvl{color:inherit;text-decoration:none;border-bottom:1px dotted rgba(45,212,191,.35);white-space:nowrap}
+a.tvl:hover,a.tvl:focus-visible{color:#2DD4BF;border-bottom-color:#2DD4BF}
+.tvi{width:.8em;height:.8em;margin-left:.25em;vertical-align:-.05em;opacity:.35;transition:opacity .15s}
+a.tvl:hover .tvi{opacity:1}

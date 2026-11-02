@@ -1,3 +1,4 @@
+window.tvLink=function(t){const s=String(t==null?'':t);const sym=s.replace(/-/g,'.').toUpperCase();const e=s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));return '<a class="tvl" href="https://www.tradingview.com/chart/?symbol='+encodeURIComponent(sym)+'" target="_blank" rel="noopener" title="Open '+e+' chart on TradingView">'+e+'<svg class="tvi" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 12l4-4 3 3 5-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>';};
 (function(){
 'use strict';
 const $=s=>document.querySelector(s);
@@ -24,7 +25,7 @@ function badges(r){const b=[];
  return b.join('');}
 const GEM={};
 const C={
- ticker:['Ticker',r=>esc(r.ticker)+(GEM[r.ticker]!=null?' <span class="gemb" title="Gem">💎</span>':''),'l tk'],name:['Name',r=>esc(r.name),'l nmc'],source:['Universe',r=>esc(srcLabel(r.source)),'l'],
+ ticker:['Ticker',r=>tvLink(r.ticker)+(GEM[r.ticker]!=null?' <span class="gemb" title="Gem">💎</span>':''),'l tk'],name:['Name',r=>esc(r.name),'l nmc'],source:['Universe',r=>esc(srcLabel(r.source)),'l'],
  sector:['Sector',r=>esc(r.sector||'ETF'),'l'],price:['Last',r=>num(r.price)],
  setup_score:['Setup',r=>num(r.setup_score,0)],value_score:['Value',r=>num(r.value_score,0)],combined:['Score',r=>r.combined==null?NA:'<b>'+num(r.combined,0)+'</b>'],
  trigger:['Trigger',r=>num(r.trigger)],stop:['Stop',r=>num(r.stop)],to_trigger_pct:['To Trigger',r=>pct(r.to_trigger_pct)],risk_pct:['Stop Dist.',r=>pct(r.risk_pct)],
@@ -64,7 +65,7 @@ fetch('data/scan.json?v='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw
  $('#k1').textContent=D.scanned.toLocaleString();$('#k1s').textContent='of '+(D.universe||D.scanned).toLocaleString()+' in universe after liquidity filter';
  $('#k2').textContent=D.top_picks.length;$('#k3').textContent=D.volume_breakouts.length;$('#k4').textContent=bo;
  if(D.gaps&&D.gaps.length)$('#gaps').textContent='Data gaps: '+D.gaps.join('; ');
- $('#cards').innerHTML=D.top_picks.map(r=>'<article class="card"><div class="ch"><span class="tk">'+esc(r.ticker)+'</span><span class="score">Score <b>'+num(r.combined,0)+'</b></span></div>'+
+ $('#cards').innerHTML=D.top_picks.map(r=>'<article class="card"><div class="ch"><span class="tk">'+tvLink(r.ticker)+'</span><span class="score">Score <b>'+num(r.combined,0)+'</b></span></div>'+
   '<div class="nm" title="'+esc(r.name)+'">'+esc(r.name)+' · '+esc(srcLabel(r.source))+'</div>'+
   '<div class="lv"><div><span>Trigger</span><b>'+num(r.trigger)+'</b></div><div><span>Stop</span><b>'+num(r.stop)+'</b></div><div><span>Stop dist.</span><b>'+pct(r.risk_pct)+'</b></div></div>'+
   '<div class="badges">'+badges(r)+'</div></article>').join('');
