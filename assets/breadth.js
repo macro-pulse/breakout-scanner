@@ -27,8 +27,27 @@ fetch('data/breadth.json?v='+Date.now(),{cache:'no-store'}).then(r=>r.json()).th
  ['McClellan Oscillator','mco',{lines:[0]},1],['Advance/Decline line','ad_line',{},0],['New Highs − New Lows','nhnl',{lines:[0]},0],['10-day Up4/Down4 ratio','ratio10',{lines:[0.5,1,2]},2],['Summation Index','msi',{lines:[0]},0]];
  $('bcharts').innerHTML=G.map(([n,k,o,d])=>`<div class="bchart"><h4>${n}<b>${f(L[k],d)}</b></h4>${spark(R,k,o)}</div>`).join('')+`<p class="gaps" style="grid-column:1/-1;margin:0">Charts: last ${R.length} sessions, ${R[0].date} → ${b.data_date}.</p>`;
  const T=[['Date','date'],['Up 4%','up4'],['Down 4%','dn4'],['5d ratio','ratio5',2],['10d ratio','ratio10',2],['Up 25% Q','q25u'],['Down 25% Q','q25d'],['Up 25% M','m25u'],['Down 25% M','m25d'],['Up 50% M','m50u'],['Down 50% M','m50d'],['Up 13% 34d','u13'],['Down 13% 34d','d13'],['T2108','t2108',1],['Universe','count']];
- $('sbtbl').innerHTML='<thead><tr>'+T.map(t=>`<th>${t[0]}</th>`).join('')+'</tr></thead><tbody>'+R.slice().reverse().map(r=>{
-  const qu=r.q25u>r.q25d?'g1':'r1';return'<tr>'+T.map(([n,k,d])=>{if(k==='date')return`<td>${r.date}</td>`;let c=shade(k,r[k]);if(k==='q25u'||k==='q25d')c=(k==='q25u')===(r.q25u>r.q25d)?(k==='q25u'?'g1':'r1'):'';
-  if(k==='u13'||k==='d13')c=(k==='u13')===(r.u13>r.d13)?(k==='u13'?'g1':'r1'):'';return`<td class="${c}">${f(r[k],d||0)}</td>`}).join('')+'</tr>'}).join('')+'</tbody>';
+ // Stockbee Market Monitor colour coding (as in his published layout)
+ const sb=(k,r)=>{const v=r[k];if(v==null)return'';
+  if(k==='up4'||k==='dn4'){if(k==='dn4'&&v>=300)return'r2';return r.up4>=r.dn4?'g1':'pk';}
+  if(k==='ratio5'||k==='ratio10')return v>=2?'g1':'';
+  if(k==='q25u'||k==='q25d')return r.q25u>=r.q25d?'g2':'r1';
+  if(k==='m25u'||k==='m25d')return r.m25d>r.m25u?'r2':'g1';
+  if(k==='u13'||k==='d13')return r.d13>r.u13?'r2':'g1';return'';};
+ $('sbtbl').innerHTML='<thead><tr><th></th><th colspan="4" class="hp">Primary breadth</th><th colspan="8" class="hs">Secondary breadth</th><th colspan="2"></th></tr><tr>'+T.map(t=>`<th>${t[0]}</th>`).join('')+'</tr></thead><tbody>'+R.slice().reverse().map(r=>
+  '<tr>'+T.map(([n,k,d])=>k==='date'?`<td>${r.date}</td>`:`<td class="${sb(k,r)}">${f(r[k],d||0)}</td>`).join('')+'</tr>').join('')+'</tbody>';
+ const S=b.scans||{},SC=[
+  ['up4','Up 4%+ today','Close up at least 4% vs yesterday’s close, volume ≥ 100,000 shares and volume above yesterday’s.','( 100 * (C - C1) / C1) >= 4 AND V >= 100000 AND V > V1'],
+  ['dn4','Down 4%+ today','Close down at least 4% vs yesterday’s close, volume ≥ 100,000 shares and volume above yesterday’s.','C/C1<=.96 AND V >= 100000 AND V > V1'],
+  ['q25u','Up 25%+ in a quarter','Close at least 25% above the lowest close of the last 65 trading days (today included), and 20-day avg close × 20-day avg volume ≥ $250,000.','100 * ((C + .01) - ( MINC65 + .01)) / (MINC65 + .01) >= 25 and AVGC20 * AVGV20 >= 250000'],
+  ['q25d','Down 25%+ in a quarter','Close at least 25% below the highest close of the last 65 trading days, and 20-day avg close × avg volume ≥ $250,000.','(100 * ((C + .01) - (MAXC65 + .01)) / (MAXC65 + .01)) <= ( - 25) and AVGC20 * AVGV20 >= 250000'],
+  ['m25u','Up 25%+ in a month','Close at least 25% above the close 20 trading days ago; that close ≥ $5; 20-day avg close × avg volume ≥ $250,000.','C20 >= 5 AND (AVGC20 * AVGV20) >= 250000 AND 100 * (C - C20) / C20 >= 25'],
+  ['m25d','Down 25%+ in a month','Close at least 25% below the close 20 trading days ago; that close ≥ $5; 20-day avg close × avg volume ≥ $250,000.','C20 >= 5 AND (AVGC20 * AVGV20) >= 250000 AND 100 * (C - C20) / C20 <= ( - 25)'],
+  ['m50u','Up 50%+ in a month','Same as above with a 50% threshold.','C20 >= 5 AND (AVGC20 * AVGV20) >= 250000 AND 100 * (C - C20) / C20 >= 50'],
+  ['m50d','Down 50%+ in a month','Same as above with a −50% threshold.','C20 >= 5 AND (AVGC20 * AVGV20) >= 250000 AND 100 * (C - C20) / C20 <= ( - 50)'],
+  ['u13','Up 13%+ in 34 days','Close at least 13% above the lowest close of the last 34 trading days, and 20-day avg close × avg volume ≥ $250,000.','100 * ((C + .01) - ( MINC34 + .01)) / (MINC34 + .01) >= 13 and (AVGC20 * AVGV20) >= 250000'],
+  ['d13','Down 13%+ in 34 days','Close at least 13% below the highest close of the last 34 trading days, and 20-day avg close × avg volume ≥ $250,000.','(100 * ((C + .01) - (MAXC34 + .01)) / (MAXC34 + .01)) <= ( - 13) and (AVGC20 * AVGV20) >= 250000']];
+ const e=s=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+ $('sbscans').innerHTML=SC.map(([k,n,p,fm])=>{const h=S[k]||[];return`<div class="sbscan"><h4>${n} <b>${f(L[k])}</b> <small>stocks on ${b.data_date}</small></h4><p>${p}</p><code>${e(fm)}</code><div class="sbt">${h.length?h.map(x=>`<span>${tvLink(x.ticker)} <i class="${x.move>=0?'pos':'neg'}">${x.move>0?'+':''}${f(x.move,1)}%</i></span>`).join(''):'<em>No matches today.</em>'}</div>${L[k]>h.length&&h.length?`<small>Top ${h.length} of ${f(L[k])} by move size.</small>`:''}</div>`}).join('');
 }).catch(e=>{$('bmeta').textContent='Breadth data unavailable: '+e;});
 })();
