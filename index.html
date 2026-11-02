@@ -8,7 +8,7 @@
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#0B1220">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<link rel="stylesheet" href="assets/style.css?v=202611020900">
+<link rel="stylesheet" href="assets/style.css?v=202611020930">
 </head><body>
 <header class="top"><div class="wrap hdr">
  <div class="brand"><img src="assets/favicon.svg" alt="" width="28" height="28"><div><h1>Undervalued Breakout Scanner</h1><p class="sub">End-of-day equity screen · Value × Setup</p></div></div>
@@ -50,15 +50,16 @@
 <div class="tw tall"><table id="alltbl"></table></div></section>
 <section id="breadth" class="panel"><div class="ph"><h2>Market Breadth</h2><p id="bmeta">Loading…</p></div>
 <div id="bregime" class="bregime"></div><div id="bcards" class="bcards"></div><div id="bcharts" class="bcharts"></div>
-<div class="ph sub2"><h2>Stockbee Market Monitor (Pradeep Bonde)</h2><p>Daily counts across the universe. Green/red shading marks readings commonly cited as strong/weak.</p></div>
+<div class="ph sub2"><h2>Stockbee Market Monitor (Pradeep Bonde)</h2><p>Daily counts using Pradeep Bonde’s published TC2000 scan formulas (<a href="https://stockbee.blogspot.com/2022/12/market-monitor-scans.html" target="_blank" rel="noopener">Stockbee: Market Monitor Scans</a> · <a href="https://x.com/pradeepbonde/status/2117239174096982450" target="_blank" rel="noopener">his post on X</a>). Colours follow his Market Monitor layout: green = bulls in control, pink/red = bears in control, dark red = 300+ down-4% day, 5/10-day ratio ≥ 2 highlighted.</p></div>
 <div class="tw tall"><table id="sbtbl" class="sbtbl"></table></div>
+<div class="ph sub2" id="stockbee"><h2>Stockbee Scans (Pradeep Bonde)</h2><p>Every Market Monitor scan with its exact criteria and original TC2000 formula (C = close, C1/C20 = close 1/20 days ago, V = volume, MINCn/MAXCn = lowest/highest close of n days, AVGC20/AVGV20 = 20-day avg close/volume). Tickers = today’s matches, top 25 by move; click to open your TradingView layout. Source: <a href="https://stockbee.blogspot.com/2022/12/market-monitor-scans.html" target="_blank" rel="noopener">stockbee.blogspot.com</a> · <a href="https://x.com/pradeepbonde/status/2117239174096982450" target="_blank" rel="noopener">@pradeepbonde</a>.</p></div><div id="sbscans" class="sbscans"></div>
 <div class="ph sub2"><h2>How traders read these</h2></div><ul class="method" id="blegend">
-<li><b>Up/Down 4%</b> stocks moving ±4% on volume above the prior day (vol ≥ 100k). Commonly cited Stockbee guideline: 300+ up-4% stocks in a day is a breadth thrust; 300+ down-4% signals heavy selling.</li>
+<li><b>Up/Down 4%</b> (Stockbee) close ±4% vs prior close, volume ≥ 100k and above the prior day. Universe: all US common stocks, no price filter, as in his TC2000 scan. 300+ up-4% in a day = breadth thrust; 300+ down-4% = heavy selling.</li>
 <li><b>5-day / 10-day ratio</b> sum of up-4% ÷ sum of down-4%. 10-day ratio above 2 = strong, below 0.5 = weak/washout (often near lows).</li>
-<li><b>25% up/down in a quarter (65d)</b> intermediate trend gauge; when the "down" count exceeds the "up" count the market is in a correction. Extremes of 200 or fewer up stocks often mark lows.</li>
-<li><b>25% / 50% in a month (20d), 13% in 34 days</b> short-term momentum; rising up-counts show momentum expanding; spikes in down-counts show capitulation.</li>
-<li><b>T2108</b> % of stocks above their 40-day MA. Below 20 = oversold, above 70 = overbought.</li>
-<li><b>% above 20/50/200-day MA</b> above 50% = majority in uptrends; above 80 overbought, below 20 oversold.</li>
+<li><b>25% up/down in a quarter</b> (Stockbee) close vs lowest/highest close of 65 days, 20d avg close × avg volume ≥ $250k. Intermediate trend gauge; when the "down" count exceeds the "up" count the market is in a correction. Extremes of 200 or fewer up stocks often mark lows.</li>
+<li><b>25% / 50% in a month</b> (Stockbee) close vs close 20 days ago (that close ≥ $5, $250k liquidity). <b>13% in 34 days</b> close vs lowest/highest close of 34 days. Short-term momentum; rising up-counts show momentum expanding; spikes in down-counts show capitulation.</li>
+<li><b>T2108</b> % of all stocks in the universe above their 40-day MA (Worden indicator). Below 20 = oversold, above 70 = overbought.</li>
+<li><b>Classic indicators below</b> (%&gt;MA, A/D, NH/NL, McClellan, up/down volume, Zweig) use the core subset: close ≥ $5 and 50-day avg volume ≥ 100k.</li><li><b>% above 20/50/200-day MA</b> above 50% = majority in uptrends; above 80 overbought, below 20 oversold.</li>
 <li><b>New highs / new lows (52-week)</b> NH−NL positive and expanding confirms a healthy advance. High-Low Index = 10-day MA of NH/(NH+NL); above 50 bullish.</li>
 <li><b>A/D line</b> cumulative advances minus declines; divergence from the index warns of narrowing participation.</li>
 <li><b>McClellan Oscillator / Summation</b> 19 vs 39-day EMA of ratio-adjusted net advances (×1000). Above 0 = bullish breadth momentum; readings beyond ±100 are extremes. Summation = running total (trend).</li>
@@ -87,8 +88,8 @@
 </ul><p class="gaps" id="gaps"></p></section>
 </main>
 <footer class="wrap foot"><p><b>For informational purposes only. Not investment advice.</b> Mechanical screen built from end-of-day data, which may be delayed or contain errors. Levels shown are not recommendations; do your own research.</p></footer>
-<script src="assets/app.js?v=202611020900"></script>
-<script src="assets/breadth.js?v=202611020900"></script>
-<script src="assets/bonde.js?v=202611020900"></script>
-<script src="assets/gappers.js?v=202611020900"></script>
+<script src="assets/app.js?v=202611020930"></script>
+<script src="assets/breadth.js?v=202611020930"></script>
+<script src="assets/bonde.js?v=202611020930"></script>
+<script src="assets/gappers.js?v=202611020930"></script>
 </body></html>
