@@ -1,21 +1,21 @@
 scan,ticker,name,sector,price,chg_pct,chg_usd,gap_pct,vol,vol_mult,close_pos,entry,stop,risk_pct,stop_basis,earnings,why
-mb,AEMD,Aethlon Medical Inc,Healthcare,5.46,12.8,0.62,-3.9,211517,0.1,69,5.87,4.56,22.1,day low,,+12.8% on vol > yesterday after ranges contracting
-mb,GPN,Global Payments Inc,Technology,91.83,9.9,8.31,0.6,9496619,3.2,70,95.51,83.33,12.7,day low,,+9.9% on vol > yesterday after ranges contracting
-mb,DTIL,Precision Biosciences Inc,Healthcare,7.4,7.1,0.49,-2.0,429786,1.3,81,7.56,6.77,10.3,day low,,+7.1% on vol > yesterday after ranges contracting
-mb,CBLL,Ceribell Inc,Healthcare,27.39,6.4,1.64,-0.3,655908,1.3,97,27.46,25.58,6.8,day low,,+6.4% on vol > yesterday after quiet 3 days & ranges contracting
-mb,HTFL,Heartflow Inc,Healthcare,46.69,4.6,2.06,-1.7,1891023,1.0,86,47.17,43.78,7.2,day low,,+4.6% on vol > yesterday after ranges contracting
-mb,PLMR,Palomar Holdings Inc,Financial,163.59,4.4,6.91,1.8,524063,1.9,60,166.34,159.47,4.1,day low,,+4.4% on vol > yesterday after quiet 3 days & ranges contracting
-vb,CEPF,Cantor Equity Partners IV Inc,Financial,10.33,0.1,0.01,-0.2,828882,5.3,100,10.34,10.3,0.3,day low,,"5.3× avg volume, closed at 100% of range"
-vb,BIP,Brookfield Infrastructure Partners L.P,Utilities,42.81,4.2,1.74,0.2,4661845,4.2,75,43.38,41.11,5.2,day low,,"4.2× avg volume, closed at 75% of range"
-vb,JENA,Jena Acquisition Corp II,Financial,10.48,0.2,0.02,0.1,331718,3.2,100,10.49,10.46,0.2,day low,,"3.2× avg volume, closed at 100% of range"
-vb,APG,APi Group Corp,Industrials,42.07,0.5,0.21,-1.1,9616242,3.0,95,42.13,41.15,2.3,day low,,"3.0× avg volume, closed at 95% of range"
-vb,FRHC,Freedom Holding Corp,Financial,155.26,0.6,0.94,-1.5,329097,3.0,82,157.54,144.76,8.1,day low,,"3.0× avg volume, closed at 82% of range"
-vb,IVR,Invesco Mortgage Capital Inc,Real Estate,5.38,3.3,0.17,0.3,9296462,2.3,98,5.4,5.12,4.9,day low,,"2.3× avg volume, highest volume in a year, closed at 98% of range"
-ant,GFR,Greenfire Resources Ltd,Energy,7.64,-0.4,-0.03,0.0,1778422,1.2,0,7.73,7.64,1.2,3-day low,,"NR4, 3-day range 1.0%, 3 closes > 20D MA, -2.2% from 52w high"
-ant,STE,Steris Plc,Healthcare,255.76,0.4,1.0,0.9,823325,1.1,18,260.56,253.38,2.8,3-day low,,"NR7, inside day, 3-day range 2.8%, 3 closes > 20D MA, -5.1% from 52w high"
-ant,RPRX,Royalty Pharma plc,Healthcare,68.45,1.1,0.73,0.7,3529612,1.1,57,69.58,67.57,2.9,3-day low,,"NR7, inside day, 3-day range 3.0%, 3 closes > 20D MA, -2.7% from 52w high"
-ant,PLGO,Pelagos Insurance Capital Ltd,Financial,27.43,0.4,0.12,0.3,538777,1.1,9,27.86,27.0,3.1,3-day low,,"NR7, 3-day range 3.2%, 3 closes > 20D MA, -7.6% from 52w high"
-ant,CAH,Cardinal Health Inc,Healthcare,272.81,0.2,0.47,1.5,1812577,1.0,14,280.22,271.27,3.2,3-day low,,"inside day, 3-day range 3.3%, 3 closes > 20D MA, -4.7% from 52w high"
-ant,CL,Colgate-Palmolive Co,Consumer Defensive,98.71,1.9,1.83,1.3,6548065,1.2,36,99.64,95.93,3.7,3-day low,,"NR4, 3-day range 3.9%, 3 closes > 20D MA, -3.0% from 52w high"
-db,HCA,HCA Healthcare Inc,Healthcare,475.57,3.3,15.24,1.4,1579119,1.2,74,479.78,463.5,3.4,day low,,+$15.24 on 1.2× avg volume
-db,GPN,Global Payments Inc,Technology,91.83,9.9,8.31,0.6,9496619,3.2,70,95.51,83.33,12.7,day low,,+$8.31 on 3.2× avg volume
+mb,AEMD,Aethlon Medical Inc,Healthcare,5.46,12.8,0.62,-3.5,211800,0.1,69,5.87,4.56,22.2,day low,,+12.8% on vol > yesterday after ranges contracting
+mb,GPN,Global Payments Inc,Technology,91.83,9.9,8.31,0.6,9535900,3.3,70,95.51,83.33,12.7,day low,,+9.9% on vol > yesterday after ranges contracting
+mb,DTIL,Precision Biosciences Inc,Healthcare,7.4,7.1,0.49,-2.0,429800,1.3,81,7.56,6.77,10.3,day low,,+7.1% on vol > yesterday after ranges contracting
+mb,CBLL,Ceribell Inc,Healthcare,27.39,6.4,1.64,-0.3,655900,1.3,97,27.46,25.58,6.8,day low,,+6.4% on vol > yesterday after quiet 3 days & ranges contracting
+mb,HTFL,Heartflow Inc,Healthcare,46.69,4.6,2.06,-1.7,1891100,1.0,86,47.17,43.78,7.2,day low,,+4.6% on vol > yesterday after ranges contracting
+mb,PLMR,Palomar Holdings Inc,Financial,163.59,4.4,6.91,1.8,524300,1.9,58,166.56,159.47,4.3,day low,,+4.4% on vol > yesterday after quiet 3 days & ranges contracting
+vb,YSWY,Yesway Inc,Consumer Defensive,20.11,4.2,0.81,2.0,3105100,8.7,70,20.48,19.26,5.9,day low,,"8.7× avg volume, closed at 70% of range"
+vb,CEPF,Cantor Equity Partners IV Inc,Financial,10.33,0.1,0.01,-0.2,829000,5.3,100,10.34,10.3,0.3,day low,,"5.3× avg volume, closed at 100% of range"
+vb,BIP,Brookfield Infrastructure Partners L.P,Utilities,42.81,4.2,1.74,0.2,4830400,4.4,76,43.38,41.0,5.5,day low,,"4.4× avg volume, closed at 76% of range"
+vb,JENA,Jena Acquisition Corp II,Financial,10.48,0.2,0.02,0.1,361500,3.5,100,10.49,10.46,0.2,day low,,"3.5× avg volume, closed at 100% of range"
+vb,APG,APi Group Corp,Industrials,42.07,0.5,0.21,-1.1,9616300,3.0,95,42.13,41.06,2.5,day low,,"3.0× avg volume, closed at 95% of range"
+vb,FRHC,Freedom Holding Corp,Financial,155.26,0.6,0.94,-2.1,329100,3.0,81,157.73,144.76,8.2,day low,,"3.0× avg volume, closed at 81% of range"
+vb,IVR,Invesco Mortgage Capital Inc,Real Estate,5.38,3.3,0.17,0.4,9304700,2.3,96,5.4,5.12,5.0,day low,,"2.3× avg volume, highest volume in a year, closed at 96% of range"
+ant,GFR,Greenfire Resources Ltd,Energy,7.64,-0.4,-0.03,0.0,1785900,1.2,0,7.73,7.64,1.2,3-day low,,"NR4, 3-day range 1.0%, 3 closes > 20D MA, -2.2% from 52w high"
+ant,STE,Steris Plc,Healthcare,255.76,0.4,1.0,0.9,823400,1.1,18,260.56,253.38,2.8,3-day low,,"NR7, inside day, 3-day range 2.8%, 3 closes > 20D MA, -5.1% from 52w high"
+ant,RPRX,Royalty Pharma plc,Healthcare,68.45,1.1,0.73,0.7,3531000,1.1,57,69.58,67.57,2.9,3-day low,,"NR7, inside day, 3-day range 3.0%, 3 closes > 20D MA, -2.7% from 52w high"
+ant,CAH,Cardinal Health Inc,Healthcare,272.81,0.2,0.47,1.5,1978600,1.1,14,280.22,271.27,3.2,3-day low,,"inside day, 3-day range 3.3%, 3 closes > 20D MA, -4.7% from 52w high"
+ant,CL,Colgate-Palmolive Co,Consumer Defensive,98.71,1.9,1.83,1.3,6552700,1.2,37,99.64,95.93,3.7,3-day low,,"NR4, 3-day range 3.9%, 3 closes > 20D MA, -3.0% from 52w high"
+db,HCA,HCA Healthcare Inc,Healthcare,475.57,3.3,15.24,1.4,1579400,1.2,74,479.78,463.5,3.4,day low,,+$15.24 on 1.2× avg volume
+db,GPN,Global Payments Inc,Technology,91.83,9.9,8.31,0.6,9535900,3.3,70,95.51,83.33,12.7,day low,,+$8.31 on 3.3× avg volume
